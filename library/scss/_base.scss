@@ -154,28 +154,6 @@ HEADER STYLES
 .header {
 	background-color:$turk-green;
 
-	ul {
-		display: inline-block;
-	}
-
-	li {
-
-		border-right: 1px solid lighten($black, 40%);
-		margin-left: 10px;
-		padding-right: 10px;
-
-		a {
-		
-			&:hover {
-				text-decoration:underline;
-			}	
-		}
-
-		&:last-child {
-			border-right: none;
-		}
-	}
-
 	a {
 		text-decoration: none;
 	}
@@ -186,37 +164,90 @@ HEADER STYLES
 	font-size: 72px;
 	font-weight: 500;
 	text-align: left;
+	line-height: 1;
+
+	@include transition(all 0.3s ease-in-out);
+
+	&:hover {
+		background-color: darken($turk-green, 3%);
+	}
 
 	a {
 		color:$white;
-		border-right: 1px solid lighten($black, 40%);
-		padding-right: 20px;
-		margin-right: 20px;
+		padding: 0 10px;
 	}
 
 	span {
 		color:$turk-blue;
 	}
 }
-	
 
-/*********************
-NAVIGATION STYLES
-*********************/
+#menu {
+	position: relative;
+	display: inline-block;
+	float: right;
 
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
-
-#inner-header {
 	li {
-		display: inline;
+		@include transition(all 0.3s ease-in-out);
+	}
+
+	> li:not(#more-tags-area) {
+
+		margin: 10px 0 0;
+		padding: 3px 10px;
+
+		&:hover {
+			background-color: darken($turk-green, 10%);
+		}
+
+		background-color: darken($turk-green, 5%);
+
+		&:first-child, &:last-child {
+			border-left: none;
+		}
+	}
+
+	a {
+		color: $white;
 	}
 }
+
+#more-tags-area {
+	display: block;
+	opacity: 0; 
+    height: 0;
+    overflow: hidden;
+
+	width: 400px;
+	right: 0;
+	padding: 10px;
+	position: absolute;
+	background-color: rgba($white, 0.4);
+
+	&.open {
+		opacity: 1;
+   		height: auto;
+	}
+
+	li {
+		display: inline-block;
+		margin: 2px;
+		padding: 2px 5px;
+
+		&:hover {
+			background-color: darken($turk-green, 10%);
+		}
+
+		background-color: $turk-green;
+	}
+		
+}
+
+#menu > li:not(:last-child) {
+	display: inline-block;
+}
+
+
 
 /*********************
 POSTS & CONTENT STYLES

@@ -57,19 +57,23 @@
 				<div id="inner-header" class="wrap clearfix">
 					<nav role="navigation" class="clearfix">
 						<div id="logo"><a href="/" rel="nofollow">Türk<span>Gif</span></a></div>
-						<ul>
-							<li><a href="iletisim">iletişim</a></li>
-							<?php
-								$tags = get_tags('number=8&orderby=count&order=DESC');
-								$html = "";
-								foreach ( $tags as $tag ) {
-									$tag_link = get_tag_link( $tag->term_id );
+						<ul id="menu">
+							<li><a href="iletisim">İletişim</a></li>
+							<li><a id="more-tags" href="javascript:;">Daha fazla &#x25BC;</a></li>
+							<li id="more-tags-area">
+								<?php
+									$tags = get_tags('number=20&orderby=count&order=DESC');
+									$html = "<ul>";
+									foreach ( $tags as $tag ) {
+										$tag_link = get_tag_link( $tag->term_id );
 
-									$html .= "<li><a href='{$tag_link}' title='{$tag->name}'>{$tag->name}</a></li>";
-								}
+										$html .= "<li><a href='{$tag_link}' title='{$tag->name}'>{$tag->name}</a></li>";
+									}
+									$html .= "</ul>";
 
-								echo $html;
-							?>
+									echo $html;
+								?>
+							</li>
 						</ul>
 						<?php //bones_main_nav(); ?>
 					</nav>

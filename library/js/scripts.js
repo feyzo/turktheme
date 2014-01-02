@@ -67,7 +67,10 @@ jQuery(document).ready(function($) {
 	
 	
 	// add all your scripts here
-	
+	$("#more-tags").on("click", function(){
+		console.log("more tags clicked");
+		$("#more-tags-area").toggleClass("open");
+	});
  
 }); /* end of as page load scripts */
 

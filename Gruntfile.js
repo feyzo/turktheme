@@ -36,10 +36,10 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  //grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', [ 'concat', 'uglify', 'compass', 'cssmin']);
-
+  //grunt.registerTask('default', [ 'concat', 'uglify', 'compass', 'cssmin']);
+grunt.registerTask('default', [ 'concat', 'compass', 'cssmin']);
 };
