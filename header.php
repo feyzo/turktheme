@@ -79,3 +79,12 @@
 					</nav>
 				</div>
 			</header>
+			<div class="social wrap clearfix">
+				<p>Sadece Türkiye'den gifler</p>
+				<div class="like-container">
+					<div class="fb-like" data-href="https://www.facebook.com/turkgif" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+				</div>
+				<div class="tweet-container">
+					<a href="https://twitter.com/turkgif" class="twitter-follow-button" data-show-count="true" data-lang="tr" data-width="170px">@turkgif'i takip et</a>
+				</div>
+			</div>

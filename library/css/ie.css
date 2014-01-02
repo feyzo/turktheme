@@ -441,11 +441,6 @@ GENERAL STYLES
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-/* line 26, ../scss/_768up.scss */
-.wrap {
-  max-width: 1140px;
-}
-
 /*********************
 HEADER STYLES
 *********************/

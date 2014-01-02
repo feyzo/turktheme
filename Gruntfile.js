@@ -3,6 +3,16 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    watch: {
+      scripts: {
+        files: ['library/js/*'],
+        tasks: ['concat']
+      },
+      css: {
+        files: 'library/scss/*',
+        tasks: ['compass', 'cssmin']
+      },
+    },
     concat: {
       options: {
         separator: ';',
@@ -39,7 +49,8 @@ module.exports = function(grunt) {
   //grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   //grunt.registerTask('default', [ 'concat', 'uglify', 'compass', 'cssmin']);
-grunt.registerTask('default', [ 'concat', 'compass', 'cssmin']);
+grunt.registerTask('default', [ 'concat', 'compass', 'cssmin', 'watch']);
 };
