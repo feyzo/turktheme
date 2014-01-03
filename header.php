@@ -36,9 +36,10 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Feed" href="http://test.turkgif.com/feed/" />
-		<link rel='stylesheet' id='turktheme-css'  href='http://test.turkgif.com/wp-content/themes/turktheme/inc/final.min.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='turktheme-css' href='http://test.turkgif.com/wp-content/themes/turktheme/inc/final.min.css' type='text/css' media='all' />
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&subset=latin-ext' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="http://i.icomoon.io/public/temp/fb9a57dc65/turkgif/style.css">
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<?php //wp_head(); ?>
 	</head>
 

@@ -8,7 +8,7 @@ this file will be called automatically in the footer so as not to
 slow the page load.
 
 */
-
+ 
 // IE8 ployfill for GetComputed Style (for Responsive Script below)
 if (!window.getComputedStyle) {
 	window.getComputedStyle = function(el, pseudo) {
@@ -26,6 +26,50 @@ if (!window.getComputedStyle) {
 		return this;
 	}
 }
+
+(function($){
+
+    /**
+     * Copyright 2012, Digital Fusion
+     * Licensed under the MIT license.
+     * http://teamdf.com/jquery-plugins/license/
+     *
+     * @author Sam Sehnert
+     * @desc A small plugin that checks whether elements are within
+     *       the user visible viewport of a web browser.
+     *       only accounts for vertical position, not horizontal.
+     */
+    $.fn.visible = function(partial,hidden,direction){
+
+        var $t              = $(this).eq(0),
+            t               = $t.get(0),
+            $w              = $(window),
+            viewTop         = $w.scrollTop(),
+            viewBottom      = viewTop + $w.height(),
+            viewLeft        = $w.scrollLeft(),
+            viewRight       = viewLeft + $w.width(),
+            _top            = $t.offset().top,
+            _bottom         = _top + $t.height(),
+            _left           = $t.offset().left,
+            _right          = _left + $t.width(),
+            compareTop      = partial === true ? _bottom : _top,
+            compareBottom   = partial === true ? _top : _bottom,
+            compareLeft     = partial === true ? _right : _left,
+            compareRight    = partial === true ? _left : _right,
+            clientSize      = hidden === true ? t.offsetWidth * t.offsetHeight : true,
+            direction       = (direction) ? direction : 'both';
+
+        if(direction === 'both')
+            return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop)) && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
+        else if(direction === 'vertical')
+            return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+        else if(direction === 'horizontal')
+            return !!clientSize && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
+    };
+
+})(jQuery);
+
+var lastLoadedArticle, pageNumber = 0;
 
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
@@ -52,12 +96,7 @@ jQuery(document).ready(function($) {
 	
 	/* if is above or equal to 768px */
 	if (responsive_viewport >= 768) {
-	
-		/* load gravatars */
-		$('.comment img[data-gravatar]').each(function(){
-			$(this).attr('src',$(this).attr('data-gravatar'));
-		});
-		
+
 	}
 	
 	/* off the bat large screen actions */
@@ -65,14 +104,37 @@ jQuery(document).ready(function($) {
 	
 	}
 	
-	
 	// add all your scripts here
-	$("#more-tags").on("click", function(){
-		console.log("more tags clicked");
+	$("#more-tags").on("click", function() {
 		$("#more-tags-area").toggleClass("open");
 	});
+
+	$(window).scroll(function () {
+		checkEndlessContent();
+	});
+
+	//page is loaded already, so first 3 elements are on the page
+	lastLoadedArticle = $('#main article:eq(' + ((pageNumber * 3) + 2) + ')');
+	$('.pagination').hide();
  
 }); /* end of as page load scripts */
+
+function checkEndlessContent () {
+	if(lastLoadedArticle.visible( true )) {
+		pageNumber++;
+		lastLoadedArticle = $('#main article:eq(' + ((pageNumber * 3) + 2) + ')');
+
+		$.ajax({  
+	        url: "../wp-admin/admin-ajax.php",  
+	        type:'POST',  
+	        data: 'action=infinite_scroll&page_no=' + pageNumber + '&loop_file=loop',   
+	        success: function(html){  
+				console.log(pageNumber + 'loaded');
+	            $("#main").append(html);    // This will be the div where our content will be loaded  
+	        }  
+	    });  
+	}
+}
 
 
 /*! A fix for the iOS orientationchange zoom bug.

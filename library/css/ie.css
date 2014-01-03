@@ -60,13 +60,6 @@ TOOLS
   box-sizing: border-box;
 }
 
-/* line 41, ../scss/_mixins.scss */
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 /*********************
 COLORS
 Need help w/ choosing your colors? Try this site out:
@@ -80,52 +73,6 @@ http://sachagreif.com/sass-color-variables/
 /*********************
 TYPOGRAPHY
 *********************/
-/* line 85, ../scss/_mixins.scss */
-.text-left {
-  text-align: left;
-}
-
-/* line 86, ../scss/_mixins.scss */
-.text-center {
-  text-align: center;
-}
-
-/* line 87, ../scss/_mixins.scss */
-.text-right {
-  text-align: right;
-}
-
-/* line 91, ../scss/_mixins.scss */
-.alert-help, .alert-info, .alert-error, .alert-success {
-  margin: 10px;
-  padding: 5px 18px;
-  border: 1px solid;
-}
-
-/* line 97, ../scss/_mixins.scss */
-.alert-help {
-  border-color: #e8dc59;
-  background: #ebe16f;
-}
-
-/* line 103, ../scss/_mixins.scss */
-.alert-info {
-  border-color: #bfe4f4;
-  background: #d5edf8;
-}
-
-/* line 109, ../scss/_mixins.scss */
-.alert-error {
-  border-color: #f8cdce;
-  background: #fbe3e4;
-}
-
-/* line 115, ../scss/_mixins.scss */
-.alert-success {
-  border-color: #deeaae;
-  background: #e6efc2;
-}
-
 /*********************
 TRANSITION
 *********************/
@@ -147,88 +94,6 @@ BOX SIZING
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
-/*********************
-BUTTONS
-*********************/
-/* line 176, ../scss/_mixins.scss */
-.button, .button:visited {
-  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
-  border: 1px solid #080808;
-  border-top-color: #171717;
-  border-left-color: #171717;
-  padding: 4px 12px;
-  color: white;
-  display: inline-block;
-  font-size: 11px;
-  font-weight: bold;
-  text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
-  cursor: pointer;
-  margin-bottom: 20px;
-  line-height: 21px;
-  border-radius: 4px;
-  background-color: #1c1c1c;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#292929), to(#1c1c1c));
-  background-image: -webkit-linear-gradient(top, #292929, #1c1c1c);
-  background-image: -moz-linear-gradient(top, #292929, #1c1c1c);
-  background-image: -o-linear-gradient(top, #292929, #1c1c1c);
-  background-image: linear-gradient(to bottom, #292929, #1c1c1c);
-}
-/* line 195, ../scss/_mixins.scss */
-.button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
-  color: white;
-  border: 1px solid #080808;
-  border-top-color: black;
-  border-left-color: black;
-  background-color: #0f0f0f;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1c1c1c), to(#0f0f0f));
-  background-image: -webkit-linear-gradient(top, #1c1c1c, #0f0f0f);
-  background-image: -moz-linear-gradient(top, #1c1c1c, #0f0f0f);
-  background-image: -o-linear-gradient(top, #1c1c1c, #0f0f0f);
-  background-image: linear-gradient(to bottom, #1c1c1c, #0f0f0f);
-}
-/* line 203, ../scss/_mixins.scss */
-.button:active, .button:visited:active {
-  background-color: #292929;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1c1c1c), to(#292929));
-  background-image: -webkit-linear-gradient(top, #1c1c1c, #292929);
-  background-image: -moz-linear-gradient(top, #1c1c1c, #292929);
-  background-image: -o-linear-gradient(top, #1c1c1c, #292929);
-  background-image: linear-gradient(to bottom, #1c1c1c, #292929);
-}
-
-/* line 208, ../scss/_mixins.scss */
-.blue-button, .blue-button:visited {
-  border-color: #1472ad;
-  text-shadow: 0 1px 1px #1472ad;
-  background-color: #1681c4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1990db), to(#1681c4));
-  background-image: -webkit-linear-gradient(top, #1990db, #1681c4);
-  background-image: -moz-linear-gradient(top, #1990db, #1681c4);
-  background-image: -o-linear-gradient(top, #1990db, #1681c4);
-  background-image: linear-gradient(to bottom, #1990db, #1681c4);
-  box-shadow: inset 0 0 3px #59b3ec;
-}
-/* line 214, ../scss/_mixins.scss */
-.blue-button:hover, .blue-button:focus, .blue-button:visited:hover, .blue-button:visited:focus {
-  border-color: #116396;
-  background-color: #1472ad;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));
-  background-image: -webkit-linear-gradient(top, #1784c9, #1472ad);
-  background-image: -moz-linear-gradient(top, #1784c9, #1472ad);
-  background-image: -o-linear-gradient(top, #1784c9, #1472ad);
-  background-image: linear-gradient(to bottom, #1784c9, #1472ad);
-}
-/* line 218, ../scss/_mixins.scss */
-.blue-button:active, .blue-button:visited:active {
-  background-color: #1990db;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
-  background-image: -webkit-linear-gradient(top, #1681c4, #1990db);
-  background-image: -moz-linear-gradient(top, #1681c4, #1990db);
-  background-image: -o-linear-gradient(top, #1681c4, #1990db);
-  background-image: linear-gradient(to bottom, #1681c4, #1990db);
-}
-
 /******************************************************************
 Site Name:
 Author:
