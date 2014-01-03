@@ -16,16 +16,16 @@
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="apple-touch-icon.png" />
-		<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png" />
-		<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png" />
-		<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
-		<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png" />
-		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
-		<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png" />
-		<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png" />
-		<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png" />
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="../apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="../apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="../apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="../apple-touch-icon-152x152.png" />
 
 		<!--[if IE]>
 			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -36,9 +36,9 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Feed" href="http://test.turkgif.com/feed/" />
-		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Comments Feed" href="http://test.turkgif.com/comments/feed/" />
 		<link rel='stylesheet' id='turktheme-css'  href='http://test.turkgif.com/wp-content/themes/turktheme/inc/final.min.css' type='text/css' media='all' />
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&subset=latin-ext' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://i.icomoon.io/public/temp/fb9a57dc65/turkgif/style.css">
 		<?php //wp_head(); ?>
 	</head>
 
@@ -58,8 +58,8 @@
 					<nav role="navigation" class="clearfix">
 						<div id="logo"><a href="/" rel="nofollow">Türk<span>Gif</span></a></div>
 						<ul id="menu">
-							<li><a href="iletisim">İletişim</a></li>
-							<li><a id="more-tags" href="javascript:;">Daha fazla &#x25BC;</a></li>
+							<li><a href="iletisim">İLETİŞİM</a></li>
+							<li><a id="more-tags" href="javascript:;">DAHA FAZLA <span class="icon icon-arrow-down"></span></a></li>
 							<li id="more-tags-area">
 								<?php
 									$tags = get_tags('number=20&orderby=count&order=DESC');
@@ -82,9 +82,9 @@
 			<div class="social wrap clearfix">
 				<p>Sadece Türkiye'den gifler</p>
 				<div class="like-container">
-					<div class="fb-like" data-href="https://www.facebook.com/turkgif" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+					<div class="fb-like" data-href="http://turkgif.com" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 				</div>
 				<div class="tweet-container">
-					<a href="https://twitter.com/turkgif" class="twitter-follow-button" data-show-count="true" data-lang="tr" data-width="170px">@turkgif'i takip et</a>
+					<a href="https://twitter.com/turkgif" class="twitter-follow-button" data-show-count="true" data-lang="tr" data-width="175px">@turkgif'i takip et</a>
 				</div>
 			</div>

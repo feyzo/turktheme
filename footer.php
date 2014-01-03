@@ -1,5 +1,5 @@
 			<footer class="footer" role="contentinfo">
-
+				<?php
 				<div id="inner-footer" class="wrap clearfix">
 
 					<nav role="navigation">
@@ -9,7 +9,7 @@
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 
 				</div>
-
+				?>
 			</footer>
 
 		</div>
