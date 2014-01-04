@@ -13,8 +13,7 @@
 			</footer>
 
 		</div>
-		<script type='text/javascript' src='http://test.turkgif.com/wp-content/themes/turktheme/inc/final.min.js'></script>
-
+		<script type='text/javascript' src='../wp-content/themes/turktheme/inc/final.min.js'></script>
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php //wp_footer(); ?>
 		<div id="fb-root"></div>

@@ -20,13 +20,13 @@ module.exports = function(grunt) {
       },
       dist: {
         //src: ['library/js/scripts.min.js'],
-        src: ['library/js/scripts.js', 'html5shiv.js'],
+        src: ['library/js/libs/jquery.infinitescroll.js', 'library/js/scripts.js'],
         dest: 'inc/final.min.js',
       },
     },
     uglify: {
       build: {
-        src: ['library/js/scripts.js', 'html5shiv.js'],
+        src: ['library/js/scripts.js'],
         dest: 'library/js/scripts.min.js'
       }
     },

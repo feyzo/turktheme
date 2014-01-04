@@ -30,12 +30,17 @@
 		<!--[if IE]>
 			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 		<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="../wp-content/themes/turktheme/inc/html5shiv.js"></script>
+		<![endif]-->
 		
 		<meta name="msapplication-TileColor" content="#27AE60">
 		<meta name="msapplication-TileImage" content="win8-tile-icon.png">
-
+		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Feed" href="http://test.turkgif.com/feed/" />
+		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Comments Feed" href="http://test.turkgif.com/comments/feed/" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Feed" href="http://test.turkgif.com/feed/" />
+		
 		<link rel='stylesheet' id='turktheme-css' href='http://test.turkgif.com/wp-content/themes/turktheme/inc/final.min.css' type='text/css' media='all' />
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&subset=latin-ext' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="http://i.icomoon.io/public/temp/fb9a57dc65/turkgif/style.css">
@@ -44,14 +49,6 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		  ga('create', 'UA-46790970-1', 'turkgif.com');
-		  ga('send', 'pageview');
-		</script>
 
 		<div id="container">
 			<header class="header" role="banner">

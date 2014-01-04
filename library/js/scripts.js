@@ -109,13 +109,36 @@ jQuery(document).ready(function($) {
 		$("#more-tags-area").toggleClass("open");
 	});
 
-	$(window).scroll(function () {
-		checkEndlessContent();
-	});
+	// $(window).scroll(function () {
+	// 	checkEndlessContent();
+	// });
 
 	//page is loaded already, so first 3 elements are on the page
-	lastLoadedArticle = $('#main article:eq(' + ((pageNumber * 3) + 2) + ')');
+	//lastLoadedArticle = $('#main article:eq(' + ((pageNumber * 3) + 2) + ')');
 	$('.pagination').hide();
+
+	$('.pagination a').each(function (i, val) {
+		var pageLink = $(val);
+
+		pageLink.attr('href', pageLink.attr('href') + '?inf=1');
+	});
+
+	$('#main').infinitescroll({
+			loading: {
+				msgText: "<em>Sonraki sayfa yükleniyor...</em>",
+				finishedMsg: "<em>Başka gifimiz kalmadı.</em>"
+			},
+			nextSelector: ".next",
+			navSelector: ".pagination",
+			itemSelector: "article",
+			debug: false,
+			behavior: "",
+			callback: "",
+			bufferPx: 600
+		}, function(newElements, data, url) {
+
+		});
+		
  
 }); /* end of as page load scripts */
 
@@ -125,12 +148,14 @@ function checkEndlessContent () {
 		lastLoadedArticle = $('#main article:eq(' + ((pageNumber * 3) + 2) + ')');
 
 		$.ajax({  
-	        url: "../wp-admin/admin-ajax.php",  
-	        type:'POST',  
-	        data: 'action=infinite_scroll&page_no=' + pageNumber + '&loop_file=loop',   
+	        url: "page/" + (pageNumber + 1) + "/",
 	        success: function(html){  
 				console.log(pageNumber + 'loaded');
-	            $("#main").append(html);    // This will be the div where our content will be loaded  
+
+				var newPage = document.createElement('div');
+				newPage.innerHTML = html;
+				var articles = $(newPage).find('#main article');
+	            $("#main").append(articles);// This will be the div where our content will be loaded  
 	        }  
 	    });  
 	}

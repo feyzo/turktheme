@@ -1,10 +1,19 @@
-<?php get_header(); ?>
+<?php 
+	$isInfinite = $_GET['inf'];
+?>
+
+	<?php if ( $isInfinite != '1' ) : ?>
+	<?php get_header(); ?>
+
 
 			<div id="content">
 
 				<div id="inner-content" class="wrap clearfix">
 
 					<div id="main" class="twelvecol first clearfix" role="main">
+
+	
+	<?php endif; ?>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -49,7 +58,7 @@
 						</article>
 
 						<?php endwhile; ?>
-
+							<?php if ( $isInfinite != '1' ) : ?>
 								<?php if ( function_exists( 'bones_page_navi' ) ) { ?>
 										<?php bones_page_navi(); ?>
 								<?php } else { ?>
@@ -60,9 +69,9 @@
 												</ul>
 										</nav>
 								<?php } ?>
-
+							<?php endif; ?>
 						<?php else : ?>
-
+							<?php if ( $isInfinite != '1' ) : ?>
 								<article id="post-not-found" class="hentry clearfix">
 										<header class="article-header">
 											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
@@ -74,9 +83,9 @@
 											<p><?php _e( 'This is the error message in the index.php template.', 'bonestheme' ); ?></p>
 									</footer>
 								</article>
-
+							<?php endif; ?>
 						<?php endif; ?>
-
+<?php if ( $isInfinite != '1' ) : ?>
 					</div>
 
 					<?php get_sidebar(); ?>
@@ -86,3 +95,4 @@
 			</div>
 
 <?php get_footer(); ?>
+<?php endif; ?>
