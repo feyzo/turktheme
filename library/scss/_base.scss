@@ -22,8 +22,19 @@ body {
 	color: #000;
 }
 
+@font-face {
+	font-family: 'turkgif';
+	src:url('fonts/turkgif.eot');
+	src:url('fonts/turkgif.eot?#iefix') format('embedded-opentype'),
+		url('fonts/turkgif.woff') format('woff'),
+		url('fonts/turkgif.ttf') format('truetype'),
+		url('fonts/turkgif.svg#turkgif') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 .icon {
-	font-family: 'turktheme';
+	font-family: 'turkgif';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -35,7 +46,25 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
- 
+
+.icon-twitter:before {
+	content: "\e600";
+}
+.icon-facebook:before {
+	content: "\e601";
+}
+.icon-tumblr:before {
+	content: "\e602";
+}
+.icon-mail:before {
+	content: "\e603";
+}
+.icon-arrow-down:before {
+	content: "\e605";
+}
+.icon-bubbles:before {
+	content: "\e604";
+}
 
 /*********************
 LAYOUT & GRID STYLES
@@ -233,6 +262,7 @@ HEADER STYLES
 }
 
 #main {
+	padding-bottom: 80px;
 	> article {
 		border-bottom: 1px solid lighten($turk-blue, 60%);
 		padding-bottom: 2em;
@@ -260,8 +290,9 @@ HEADER STYLES
 
 	h1 {
 		float: left;
-		line-height: 0;
-
+		width: 440px;
+		margin: 0;
+		
 		a {
 			@include transition(all 0.3s ease-in-out);
 
@@ -278,7 +309,6 @@ HEADER STYLES
 	.byline {
 		float: right;
 		color: lighten($turk-blue, 50%);
-		margin: 20px 0 0;
 	}
 }
 
@@ -357,4 +387,40 @@ HEADER STYLES
 .post-comments {
 	margin-top: 15px;
 	padding: 10px;
+}
+
+.pagination {
+	width: 100%;
+	text-align: center;
+	ul {
+		display: inline-block;
+	}
+	li {
+		display: inline-block;
+		margin: 0 3px;
+
+		a,span {
+			@include transition(all 0.3s ease-in-out);
+
+			&:hover {
+				background-color: darken($turk-green, 10%);
+			}
+
+			color: $white;
+			background-color: $turk-green;
+			padding: 2px 6px;
+			text-decoration: none;
+		}
+	}
+}
+
+#infscr-loading {
+	width: 540px;
+	height: 40px;
+	padding: 10px;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 1;
+	background-color: $turk-green;
+	color: $white;
 }

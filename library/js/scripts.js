@@ -69,7 +69,8 @@ if (!window.getComputedStyle) {
 
 })(jQuery);
 
-var lastLoadedArticle, pageNumber = 0;
+var maxPageNumber = parseInt($('a.page-numbers:not(.next):last').html()),
+currentPageNumber = parseInt($('.page-numbers.current').html());
 
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
@@ -109,12 +110,7 @@ jQuery(document).ready(function($) {
 		$("#more-tags-area").toggleClass("open");
 	});
 
-	// $(window).scroll(function () {
-	// 	checkEndlessContent();
-	// });
-
-	//page is loaded already, so first 3 elements are on the page
-	//lastLoadedArticle = $('#main article:eq(' + ((pageNumber * 3) + 2) + ')');
+	//infinite scroll
 	$('.pagination').hide();
 
 	$('.pagination a').each(function (i, val) {
@@ -124,43 +120,31 @@ jQuery(document).ready(function($) {
 	});
 
 	$('#main').infinitescroll({
-			loading: {
-				msgText: "<em>Sonraki sayfa yükleniyor...</em>",
-				finishedMsg: "<em>Başka gifimiz kalmadı.</em>"
-			},
-			nextSelector: ".next",
-			navSelector: ".pagination",
-			itemSelector: "article",
-			debug: false,
-			behavior: "",
-			callback: "",
-			bufferPx: 600
-		}, function(newElements, data, url) {
-
-		});
-		
+		loading: {
+			msgText: "Yeni gifler yükleniyor...",
+			finishedMsg: "Başka gifimiz kalmadı.",
+			selector: '#main'
+		},
+		state: {
+			currPage: currentPageNumber
+		},
+		nextSelector: ".next",
+		navSelector: ".pagination",
+		itemSelector: "article",
+		debug: false,
+		behavior: "",
+		callback: "",
+		bufferPx: 600,
+		maxPage: maxPageNumber,
+		path: function (i) {
+			return '/page/' + i + '/';
+		}
+	}, function(newElements, data, url) {
+		currentPageNumber++;
+	});
+	//infinite scroll
  
 }); /* end of as page load scripts */
-
-function checkEndlessContent () {
-	if(lastLoadedArticle.visible( true )) {
-		pageNumber++;
-		lastLoadedArticle = $('#main article:eq(' + ((pageNumber * 3) + 2) + ')');
-
-		$.ajax({  
-	        url: "page/" + (pageNumber + 1) + "/",
-	        success: function(html){  
-				console.log(pageNumber + 'loaded');
-
-				var newPage = document.createElement('div');
-				newPage.innerHTML = html;
-				var articles = $(newPage).find('#main article');
-	            $("#main").append(articles);// This will be the div where our content will be loaded  
-	        }  
-	    });  
-	}
-}
-
 
 /*! A fix for the iOS orientationchange zoom bug.
  Script by @scottjehl, rebound by @wilto.

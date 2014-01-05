@@ -6,32 +6,17 @@
 
 					<div id="main" class="eightcol first clearfix" role="main">
 
-						<article id="post-not-found" class="hentry clearfix">
+						<article role="article">
+							<header class="article-header clearfix">
 
-							<header class="article-header">
-
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
+								<h1 class="h2"><a rel="bookmark" title="naptın hacı?">naptın hacı?</a></h1>
 
 							</header>
-
-							<section class="entry-content">
-
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
-
-							</section>
-
-							<section class="search">
-
-									<p><?php get_search_form(); ?></p>
-
-							</section>
-
-							<footer class="article-footer">
-
-									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
-
-							</footer>
-
+							<div class="clearfix">
+								<section class="entry-content clearfix">
+									<img src="http://turkgif.s3.amazonaws.com/wp-content/uploads/404.gif" alt='sayfa bulunamadı'>
+								</section>
+							</div>
 						</article>
 
 					</div>

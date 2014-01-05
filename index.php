@@ -58,18 +58,6 @@
 						</article>
 
 						<?php endwhile; ?>
-							<?php if ( $isInfinite != '1' ) : ?>
-								<?php if ( function_exists( 'bones_page_navi' ) ) { ?>
-										<?php bones_page_navi(); ?>
-								<?php } else { ?>
-										<nav class="wp-prev-next">
-												<ul class="clearfix">
-													<li class="prev-link"><?php next_posts_link( __( '&laquo; Older Entries', 'bonestheme' )) ?></li>
-													<li class="next-link"><?php previous_posts_link( __( 'Newer Entries &raquo;', 'bonestheme' )) ?></li>
-												</ul>
-										</nav>
-								<?php } ?>
-							<?php endif; ?>
 						<?php else : ?>
 							<?php if ( $isInfinite != '1' ) : ?>
 								<article id="post-not-found" class="hentry clearfix">
@@ -87,7 +75,7 @@
 						<?php endif; ?>
 <?php if ( $isInfinite != '1' ) : ?>
 					</div>
-
+					<?php bones_page_navi(); ?>
 					<?php get_sidebar(); ?>
 
 				</div>

@@ -135,7 +135,7 @@
             opts.loading.selector = opts.loading.selector || opts.contentSelector;
 
             // Define loading.msg
-            opts.loading.msg = opts.loading.msg || $('<div id="infscr-loading"><img alt="Loading..." src="' + opts.loading.img + '" /><div>' + opts.loading.msgText + '</div></div>');
+            opts.loading.msg = opts.loading.msg || $('<div id="infscr-loading"><div>' + opts.loading.msgText + '</div></div>');
 
             // Preload loading.img
             (new Image()).src = opts.loading.img;
@@ -477,11 +477,8 @@
             }
 
             opts.loading.msg
-            .find('img')
-            .hide()
-            .parent()
             .find('div').html(opts.loading.finishedMsg).animate({ opacity: 1 }, 2000, function () {
-                $(this).parent().fadeOut(opts.loading.speed);
+                //$(this).parent().fadeOut(opts.loading.speed);
             });
 
             // user provided callback when done    

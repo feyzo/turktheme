@@ -42,8 +42,9 @@
 		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Feed" href="http://test.turkgif.com/feed/" />
 		
 		<link rel='stylesheet' id='turktheme-css' href='http://test.turkgif.com/wp-content/themes/turktheme/inc/final.min.css' type='text/css' media='all' />
-		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&subset=latin-ext' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="http://i.icomoon.io/public/temp/fb9a57dc65/turkgif/style.css">
+		<!-- <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&subset=latin-ext' rel='stylesheet' type='text/css'> -->
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&amp;text=ABC%C3%87DEFG%C4%9EHI%C4%B0JKLMNO%C3%96PRS%C5%9ETU%C3%9CVYZabc%C3%A7defg%C4%9Fh%C4%B1ijklmno%C3%B6prs%C5%9Ftu%C3%BCvyz%E2%80%99%27%5B%5D()%7B%7D%E2%9F%A8%E2%9F%A9%3A%2C-%E2%80%94%E2%80%A6!.%3F%E2%80%9C%E2%80%9D%E2%80%98%E2%80%99%22%3B%2F%26%40*%5C%E2%80%A2%5E%C2%A9%C2%B0%C2%A1%C2%BF%23%25%C2%B6%E2%80%B2%C2%AE%C2%A7~_%E2%80%93' rel='stylesheet' type='text/css'>
+		
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<?php //wp_head(); ?>
 	</head>
