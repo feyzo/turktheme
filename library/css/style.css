@@ -466,6 +466,9 @@ TOOLS
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
 }
 
 /*********************
@@ -583,10 +586,15 @@ body {
   content: "\e604";
 }
 
+/* line 68, ../scss/_base.scss */
+.icon-arrow-up:before {
+  content: "\e606";
+}
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-/* line 73, ../scss/_base.scss */
+/* line 76, ../scss/_base.scss */
 .wrap {
   max-width: 900px;
   width: 96%;
@@ -596,7 +604,7 @@ LAYOUT & GRID STYLES
 /*********************
 LINK STYLES
 *********************/
-/* line 83, ../scss/_base.scss */
+/* line 86, ../scss/_base.scss */
 a, a:visited {
   color: #292929;
   /* on hover */
@@ -606,7 +614,7 @@ a, a:visited {
   /* on click */
   /* mobile tap color */
 }
-/* line 97, ../scss/_base.scss */
+/* line 100, ../scss/_base.scss */
 a:link, a:visited:link {
   /*
   this highlights links on iPhones/iPads.
@@ -619,7 +627,7 @@ a:link, a:visited:link {
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
-/* line 111, ../scss/_base.scss */
+/* line 114, ../scss/_base.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-family: "Ubuntu", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
@@ -630,33 +638,33 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   */
   /* removing text decoration from all headline links */
 }
-/* line 121, ../scss/_base.scss */
+/* line 124, ../scss/_base.scss */
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
 }
 
-/* line 126, ../scss/_base.scss */
+/* line 129, ../scss/_base.scss */
 h1, .h1 {
   font-size: 2.5em;
 }
 
-/* line 130, ../scss/_base.scss */
+/* line 133, ../scss/_base.scss */
 h2, .h2 {
   font-size: 1.75em;
 }
 
-/* line 134, ../scss/_base.scss */
+/* line 137, ../scss/_base.scss */
 h3, .h3 {
   font-size: 1.125em;
 }
 
-/* line 138, ../scss/_base.scss */
+/* line 141, ../scss/_base.scss */
 h4, .h4 {
   font-size: 1.1em;
   font-weight: 700;
 }
 
-/* line 143, ../scss/_base.scss */
+/* line 146, ../scss/_base.scss */
 h5, .h5 {
   font-size: 0.846em;
   text-transform: uppercase;
@@ -666,16 +674,20 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
-/* line 153, ../scss/_base.scss */
+/* line 156, ../scss/_base.scss */
 .header {
   background-color: #27ae60;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  top: 0;
 }
-/* line 156, ../scss/_base.scss */
+/* line 163, ../scss/_base.scss */
 .header a {
   text-decoration: none;
 }
 
-/* line 161, ../scss/_base.scss */
+/* line 168, ../scss/_base.scss */
 #logo {
   float: left;
   font-size: 72px;
@@ -686,34 +698,35 @@ HEADER STYLES
   -transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 170, ../scss/_base.scss */
+/* line 177, ../scss/_base.scss */
 #logo:hover {
   background-color: #24a259;
 }
-/* line 174, ../scss/_base.scss */
+/* line 181, ../scss/_base.scss */
 #logo a {
   display: inline-block;
   color: white;
   padding: 5px 10px;
 }
-/* line 180, ../scss/_base.scss */
+/* line 187, ../scss/_base.scss */
 #logo span {
   color: #2c3e50;
 }
 
-/* line 185, ../scss/_base.scss */
+/* line 192, ../scss/_base.scss */
 #menu {
   position: relative;
   display: inline-block;
   float: right;
   line-height: 2;
   padding-right: 10px;
+  margin-top: 20px;
 }
-/* line 192, ../scss/_base.scss */
+/* line 200, ../scss/_base.scss */
 #menu li {
   display: inline-block;
 }
-/* line 196, ../scss/_base.scss */
+/* line 204, ../scss/_base.scss */
 #menu > li a {
   margin-left: 5px;
   padding: 3px 10px;
@@ -722,30 +735,49 @@ HEADER STYLES
   transition: all 0.3s ease-in-out;
   background-color: #229955;
 }
-/* line 201, ../scss/_base.scss */
+/* line 209, ../scss/_base.scss */
 #menu > li a:hover {
   background-color: #1e8449;
 }
-/* line 208, ../scss/_base.scss */
+/* line 216, ../scss/_base.scss */
 #menu > li > a {
   padding: 11px 20px;
   font-size: 19px;
   font-weight: 400;
 }
-/* line 213, ../scss/_base.scss */
+/* line 221, ../scss/_base.scss */
 #menu > li > a span {
   vertical-align: middle;
 }
-/* line 218, ../scss/_base.scss */
+/* line 226, ../scss/_base.scss */
 #menu > li:not(:last-child) {
   display: inline-block;
 }
-/* line 222, ../scss/_base.scss */
+/* line 230, ../scss/_base.scss */
 #menu a {
   color: white;
 }
 
-/* line 227, ../scss/_base.scss */
+/* line 235, ../scss/_base.scss */
+.goup {
+  -webkit-transition: all 0.3s ease-in-out;
+  -transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  display: none;
+  position: absolute;
+  text-align: center;
+  font-size: 35px;
+  width: 500px;
+  left: 50%;
+  margin-left: -250px;
+}
+/* line 239, ../scss/_base.scss */
+.goup:hover {
+  color: #cccccc;
+}
+
+/* line 255, ../scss/_base.scss */
 #more-tags-area {
   display: block;
   opacity: 0;
@@ -759,23 +791,23 @@ HEADER STYLES
   position: absolute;
   background-color: rgba(255, 255, 255, 0.6);
 }
-/* line 241, ../scss/_base.scss */
+/* line 269, ../scss/_base.scss */
 #more-tags-area.open {
   opacity: 1;
   height: auto;
 }
 
-/* line 247, ../scss/_base.scss */
+/* line 275, ../scss/_base.scss */
 .social {
   text-align: right;
   border-bottom: 1px solid #cbd7e3;
   padding: 10px 10px;
 }
-/* line 252, ../scss/_base.scss */
+/* line 280, ../scss/_base.scss */
 .social > div {
   display: inline-block;
 }
-/* line 256, ../scss/_base.scss */
+/* line 284, ../scss/_base.scss */
 .social p {
   margin: 0;
   padding-top: 3px;
@@ -783,44 +815,67 @@ HEADER STYLES
   color: #2c3e50;
 }
 
-/* line 264, ../scss/_base.scss */
+/* line 292, ../scss/_base.scss */
+#container {
+  margin-top: 82px;
+}
+
+/* line 297, ../scss/_base.scss */
+.small #logo {
+  font-size: 30px;
+}
+/* line 301, ../scss/_base.scss */
+.small #menu {
+  margin-top: 3px;
+}
+/* line 304, ../scss/_base.scss */
+.small #menu > li > a {
+  padding: 3px 6px;
+  font-size: 14px;
+}
+/* line 310, ../scss/_base.scss */
+.small .goup {
+  display: block;
+}
+
+/* line 315, ../scss/_base.scss */
 #main {
   padding-bottom: 80px;
 }
-/* line 266, ../scss/_base.scss */
+/* line 317, ../scss/_base.scss */
 #main > article {
   border-bottom: 1px solid #cbd7e3;
   padding-bottom: 2em;
   margin-top: 2em;
 }
-/* line 271, ../scss/_base.scss */
+/* line 322, ../scss/_base.scss */
 #main > article section {
   width: 540px;
   float: left;
 }
-/* line 276, ../scss/_base.scss */
+/* line 327, ../scss/_base.scss */
 #main > article aside {
   width: 320px;
   float: right;
 }
 
-/* line 283, ../scss/_base.scss */
+/* line 334, ../scss/_base.scss */
 #inner-content {
   padding: 0 10px;
 }
 
-/* line 287, ../scss/_base.scss */
+/* line 338, ../scss/_base.scss */
 .article-header {
   width: 540px;
   margin-bottom: 10px;
 }
-/* line 291, ../scss/_base.scss */
+/* line 342, ../scss/_base.scss */
 .article-header h1 {
   float: left;
   width: 440px;
   margin: 0;
 }
-/* line 296, ../scss/_base.scss */
+/* line 347, ../scss/_base.scss */
 .article-header h1 a {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -829,17 +884,21 @@ HEADER STYLES
   color: white;
   padding: 5px;
 }
-/* line 299, ../scss/_base.scss */
+/* line 350, ../scss/_base.scss */
 .article-header h1 a:hover {
   background-color: #1e8449;
 }
-/* line 309, ../scss/_base.scss */
+/* line 360, ../scss/_base.scss */
 .article-header .byline {
   float: right;
   color: #aabdd1;
 }
 
-/* line 316, ../scss/_base.scss */
+/* line 366, ../scss/_base.scss */
+.tags {
+  margin-left: -3px;
+}
+/* line 369, ../scss/_base.scss */
 .tags a {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -851,18 +910,19 @@ HEADER STYLES
   margin: 3px;
   text-decoration: none;
 }
-/* line 319, ../scss/_base.scss */
+/* line 372, ../scss/_base.scss */
 .tags a:hover {
   background-color: #1e8449;
 }
 
-/* line 334, ../scss/_base.scss */
+/* line 387, ../scss/_base.scss */
 .entry-content img {
   width: 540px;
   height: 100%;
+  transition: opacity .3s ease-in;
 }
 
-/* line 341, ../scss/_base.scss */
+/* line 396, ../scss/_base.scss */
 .post-social a {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -872,26 +932,34 @@ HEADER STYLES
   text-align: center;
   color: rgba(44, 62, 80, 0.5);
   border: 1px solid #dce4ec;
-  width: 75px;
   margin-bottom: 5px;
 }
-/* line 344, ../scss/_base.scss */
+/* line 399, ../scss/_base.scss */
 .post-social a:hover {
   color: white;
   background-color: #2c3e50;
 }
-/* line 357, ../scss/_base.scss */
+/* line 411, ../scss/_base.scss */
 .post-social a .icon {
   vertical-align: middle;
 }
-/* line 362, ../scss/_base.scss */
+/* line 415, ../scss/_base.scss */
+.post-social a.dokul {
+  width: 312px;
+  height: 60px;
+  font-size: 32px;
+  line-height: 60px;
+  font-weight: 500;
+}
+/* line 424, ../scss/_base.scss */
 .post-social > a {
+  width: 75px;
   height: 75px;
   line-height: 65px;
   font-size: 50px;
 }
 
-/* line 369, ../scss/_base.scss */
+/* line 432, ../scss/_base.scss */
 .vote-container {
   display: inline-block;
   width: 60px;
@@ -899,39 +967,39 @@ HEADER STYLES
   vertical-align: middle;
   margin-top: -18px;
 }
-/* line 376, ../scss/_base.scss */
+/* line 439, ../scss/_base.scss */
 .vote-container a {
   height: 28px;
   line-height: 25px;
   font-size: 30px;
 }
 
-/* line 383, ../scss/_base.scss */
+/* line 446, ../scss/_base.scss */
 .vote-down {
   margin-top: 4px;
 }
 
-/* line 387, ../scss/_base.scss */
+/* line 450, ../scss/_base.scss */
 .post-comments {
   margin-top: 15px;
   padding: 10px;
 }
 
-/* line 392, ../scss/_base.scss */
+/* line 455, ../scss/_base.scss */
 .pagination {
   width: 100%;
   text-align: center;
 }
-/* line 395, ../scss/_base.scss */
+/* line 458, ../scss/_base.scss */
 .pagination ul {
   display: inline-block;
 }
-/* line 398, ../scss/_base.scss */
+/* line 461, ../scss/_base.scss */
 .pagination li {
   display: inline-block;
   margin: 0 3px;
 }
-/* line 402, ../scss/_base.scss */
+/* line 465, ../scss/_base.scss */
 .pagination li a, .pagination li span {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -941,12 +1009,12 @@ HEADER STYLES
   padding: 2px 6px;
   text-decoration: none;
 }
-/* line 405, ../scss/_base.scss */
+/* line 468, ../scss/_base.scss */
 .pagination li a:hover, .pagination li span:hover {
   background-color: #1e8449;
 }
 
-/* line 417, ../scss/_base.scss */
+/* line 480, ../scss/_base.scss */
 #infscr-loading {
   width: 540px;
   height: 40px;

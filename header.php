@@ -3,18 +3,20 @@
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" class="no-js"><!--<![endif]-->
 
 	<head>
+		<meta name="robots" content="nofollow,noindex" />
 		<meta charset="utf-8">
-
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-		<title>TürkGif</title>
-
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&subset=latin-ext' rel='stylesheet' type='text/css'>
+		<link rel='stylesheet' id='turktheme-css' href='http://test.turkgif.com/wp-content/themes/turktheme/inc/final.min.css' type='text/css' media='all' />
+
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
 		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 		<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
@@ -41,11 +43,57 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Feed" href="http://test.turkgif.com/feed/" />
 		
-		<link rel='stylesheet' id='turktheme-css' href='http://test.turkgif.com/wp-content/themes/turktheme/inc/final.min.css' type='text/css' media='all' />
-		<!-- <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&subset=latin-ext' rel='stylesheet' type='text/css'> -->
-		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&amp;text=ABC%C3%87DEFG%C4%9EHI%C4%B0JKLMNO%C3%96PRS%C5%9ETU%C3%9CVYZabc%C3%A7defg%C4%9Fh%C4%B1ijklmno%C3%B6prs%C5%9Ftu%C3%BCvyz%E2%80%99%27%5B%5D()%7B%7D%E2%9F%A8%E2%9F%A9%3A%2C-%E2%80%94%E2%80%A6!.%3F%E2%80%9C%E2%80%9D%E2%80%98%E2%80%99%22%3B%2F%26%40*%5C%E2%80%A2%5E%C2%A9%C2%B0%C2%A1%C2%BF%23%25%C2%B6%E2%80%B2%C2%AE%C2%A7~_%E2%80%93' rel='stylesheet' type='text/css'>
+		<?php if (is_single()) : if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+			<title>TürkGif - <?php the_title(); ?></title>
+			<meta name="title" content="TürkGif - <?php the_title(); ?>" />
+			<meta name="keyword" content="<?php
+				$keywords = get_the_tags();
+				if( $keywords ) {
+				    foreach($keywords as $keyword) {
+				      echo $keyword->name . ',';
+				    }
+				}
+			 ?>" />
+
+			<meta property="og:url" content="<?php the_permalink() ?>"/>  
+			<meta property="og:title" content="<?php single_post_title(''); ?>" />  
+			<meta property="og:type" content="article" />  
+			<meta property="og:image" content="<?php
+
+			if (function_exists('wp_get_attachment_thumb_url')) {
+				echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); 
+			}?>" />   
+
+			<meta name="twitter:card" content="photo">
+			<meta name="twitter:title" content="TürkGif - <?php the_title(); ?>">
+			<meta name="twitter:image" content="<?php
+
+			if (function_exists('wp_get_attachment_thumb_url')) {
+				echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); 
+			}?>" />
+
+		<?php endwhile; endif; elseif(is_home()) : ?>
+			<title>TürkGif</title>
+			<meta name="title" content="TürkGif" />
+			<meta name="keyword" content="turk,türk,gif,türkgif,turkgif,türkiye,türkiyeden,gifler" />
+			<meta property="og:url" content="http://test.turkgif.com"/>  
+			<meta property="og:title" content="TürkGif" />
+			<meta property="og:type" content="website" />  
+			<meta property="og:image" content="http://test.turkgif.com/logo_300x300.gif" />  
+
+			<meta name="twitter:card" content="photo">
+			<meta name="twitter:title" content="TürkGif">
+			<meta name="twitter:image" content="http://test.turkgif.com/logo_300x300.gif" />
 		
-		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<?php endif; ?>
+			<meta name="description" content="Sadece Türkiye'den gifler." />
+			<meta property="og:description" content="Sadece Türkiye'den gifler." />
+			<meta property="fb:admins" content="1021654561"/>
+			<meta property="fb:app_id" content="409586202501141"/>
+			<meta name="twitter:site" content="@turkgif">
+			<meta name="twitter:creator" content="@turkgif">
+		
 		<?php //wp_head(); ?>
 	</head>
 
@@ -56,6 +104,7 @@
 				<div id="inner-header" class="wrap clearfix">
 					<nav role="navigation" class="clearfix">
 						<div id="logo"><a href="/" rel="nofollow">Türk<span>Gif</span></a></div>
+						<a href="javascript:;" class="goup icon icon-arrow-up"></a>
 						<ul id="menu">
 							<li><a href="iletisim">İLETİŞİM</a></li>
 							<li><a id="more-tags" href="javascript:;">DAHA FAZLA <span class="icon icon-arrow-down"></span></a></li>
@@ -78,7 +127,7 @@
 					</nav>
 				</div>
 			</header>
-			<div class="social wrap clearfix">
+			<div class="social wrap clearfix small">
 				<p>Sadece Türkiye'den gifler</p>
 				<div class="like-container">
 					<div class="fb-like" data-href="http://turkgif.com" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>

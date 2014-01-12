@@ -49,7 +49,8 @@
 										<a href="javascript:;" class="post-twitter"><span class="icon icon-twitter"></span></a>
 										<a href="javascript:;" class="post-tumblr"><span class="icon icon-tumblr"></span></a>
 										<a href="javascript:;" class="post-mail"><span class="icon icon-mail"></span></a>
-										<a href="javascript:;" class="post-comment"><span class="icon icon-bubbles"></span></a>
+										<a href="<?php the_permalink() ?>#dokul" class="dokul">Dök içini <span class="icon icon-bubbles"></span></a>
+										
 									</div>
 
 									<p class="tags"><?php the_tags( __( '', 'bonestheme' ) , '', '' ); ?></p>
