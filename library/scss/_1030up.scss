@@ -8,3 +8,22 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop. 
 
 ******************************************************************/
+
+.wrap {
+	max-width: 900px;
+}
+
+#main {
+	> article {
+		section {
+			width: 540px;
+		}
+	}
+}
+
+.entry-content {
+
+	img {
+		width: 540px;
+	}
+}

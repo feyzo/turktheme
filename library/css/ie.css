@@ -303,153 +303,21 @@ and other resources. You'll also notice the grid starts to
 come into play. Have fun!
 
 ******************************************************************/
-/*********************
-GENERAL STYLES
-*********************/
-/*********************
-LAYOUT & GRID STYLES
-*********************/
-/*********************
-HEADER STYLES
-*********************/
-/*********************
-NAVIGATION STYLES
-*********************/
-/* line 42, ../scss/_768up.scss */
-.nav {
-  background: #eee;
-  border: 0;
-  /* end .menu ul li */
-  /* highlight current page */
-  /* end current highlighters */
-}
-/* line 45, ../scss/_768up.scss */
-.nav ul {
-  margin-top: 0;
-}
-/* line 48, ../scss/_768up.scss */
-.nav li {
-  float: left;
-  position: relative;
-  /*
-  plan your menus and drop-downs wisely.
-  */
-  /* showing sub-menus */
-}
-/* line 52, ../scss/_768up.scss */
-.nav li a {
-  border-bottom: 0;
-  /*
-  you can use hover styles here even though this size
-  has the possibility of being a mobile device.
-  */
-}
-/* line 59, ../scss/_768up.scss */
-.nav li a:hover, .nav li a:focus {
-  background-color: #dedede;
-}
-/* line 71, ../scss/_768up.scss */
-.nav li ul.sub-menu,
-.nav li ul.children {
-  margin-top: 0;
-  border: 1px solid #ccc;
-  border-top: 0;
-  position: absolute;
-  overflow: hidden;
-  visibility: hidden;
-  z-index: 8999;
-  /* highlight sub-menu current page */
-}
-/* line 80, ../scss/_768up.scss */
-.nav li ul.sub-menu li,
-.nav li ul.children li {
-  /*
-  if you need to go deeper, go nuts
-  just remember deeper menus suck
-  for usability. k, bai.
-  */
-}
-/* line 82, ../scss/_768up.scss */
-.nav li ul.sub-menu li a,
-.nav li ul.children li a {
-  padding-left: 10px;
-  border-right: 0;
-  display: block;
-  width: 180px;
-  border-bottom: 1px solid #ccc;
-}
-/* line 99, ../scss/_768up.scss */
-.nav li ul.sub-menu li:last-child a,
-.nav li ul.children li:last-child a {
-  border-bottom: 0;
-}
-/* line 121, ../scss/_768up.scss */
-.nav li:hover ul {
-  top: auto;
-  overflow: visible;
-  visibility: visible;
+/* line 16, ../scss/_768up.scss */
+.wrap {
+  max-width: 768px;
 }
 
-/* end .nav */
-/*********************
-SIDEBARS & ASIDES
-*********************/
-/* line 142, ../scss/_768up.scss */
-.sidebar {
-  margin-top: 2.2em;
+/* line 22, ../scss/_768up.scss */
+#main > article section {
+  width: 400px;
 }
 
-/* line 146, ../scss/_768up.scss */
-.widgettitle {
-  border-bottom: 2px solid #444;
-  margin-bottom: 0.75em;
+/* line 30, ../scss/_768up.scss */
+.entry-content img {
+  width: 400px;
 }
 
-/* line 151, ../scss/_768up.scss */
-.widget {
-  padding: 0 10px;
-  margin: 2.2em 0;
-}
-/* line 156, ../scss/_768up.scss */
-.widget ul li {
-  margin-bottom: 0.75em;
-  /* deep nesting */
-}
-/* line 164, ../scss/_768up.scss */
-.widget ul li ul {
-  margin-top: 0.75em;
-  padding-left: 1em;
-}
-
-/* links widget */
-/* meta widget */
-/* pages widget */
-/* recent-posts widget */
-/* archives widget */
-/* tag-cloud widget */
-/* calendar widget */
-/* category widget */
-/* recent-comments widget */
-/* search widget */
-/* text widget */
-/*********************
-FOOTER STYLES
-*********************/
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-/* line 272, ../scss/_768up.scss */
-.footer-links ul li {
-  /*
-  be careful with the depth of your menus.
-  it's very rare to have multi-depth menus in
-  the footer.
-  */
-}
-
-/* end .footer-links */
 /******************************************************************
 Site Name: 
 Author: 
@@ -460,6 +328,21 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop. 
 
 ******************************************************************/
+/* line 12, ../scss/_1030up.scss */
+.wrap {
+  max-width: 900px;
+}
+
+/* line 18, ../scss/_1030up.scss */
+#main > article section {
+  width: 540px;
+}
+
+/* line 26, ../scss/_1030up.scss */
+.entry-content img {
+  width: 540px;
+}
+
 /* 
 you can call the larger styles if you want, but there's really no need 
 */

@@ -89,6 +89,7 @@
 		<?php endif; ?>
 			<meta name="description" content="Sadece Türkiye'den gifler." />
 			<meta property="og:description" content="Sadece Türkiye'den gifler." />
+			<meta property="og:site_name" content="TürkGif" />
 			<meta property="fb:admins" content="1021654561"/>
 			<meta property="fb:app_id" content="409586202501141"/>
 			<meta name="twitter:site" content="@turkgif">

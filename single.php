@@ -35,10 +35,13 @@
 												<a href="javascript:;" class="vote-down"><span class="icon icon-arrow-down"></span></a>
 											</div>*/
 										?>
-										<a href="javascript:;" class="post-facebook"><span class="icon icon-facebook"></span></a>
-										<a href="javascript:;" class="post-twitter"><span class="icon icon-twitter"></span></a>
-										<a href="javascript:;" class="post-tumblr"><span class="icon icon-tumblr"></span></a>
-										<a href="javascript:;" class="post-mail"><span class="icon icon-mail"></span></a>
+										<a href="https://www.facebook.com/sharer/sharer.php?u=<?php esc_url(the_permalink()) ?>" target="_blank" class="post-facebook"><span class="icon icon-facebook"></span></a>
+
+										<a href="https://twitter.com/intent/tweet?text=<?php esc_url(the_title_attribute()) ?>&url=<?php esc_url(the_permalink())?>&via=turkgif&related=turkgif" target="_blank" class="post-twitter"><span class="icon icon-twitter"></span></a>
+
+										<a href="http://www.tumblr.com/share/photo?source=<?php echo esc_url(wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID))) ?>&caption=<?php echo urlencode(the_title_attribute()) ?>&clickthru=<?php echo urlencode(the_permalink()) ?>" target="_blank" class="post-tumblr"><span class="icon icon-tumblr"></span></a>
+										
+										<a href="mailto:arkadas@adresi.com?Subject=<?php echo esc_url(the_title_attribute()) ?>&Body=<?php echo urlencode(the_permalink()) ?>" target="_blank" class="post-mail"><span class="icon icon-mail"></span></a>
 									</div>
 
 									<p class="tags"><?php the_tags( __( '', 'bonestheme' ) , '', '' ); ?></p>

@@ -74,7 +74,6 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	max-width: 900px;
 	width: 96%;
 	margin: 0 auto;
 }
@@ -385,9 +384,7 @@ HEADER STYLES
 .entry-content {
 
 	img {
-		width: 540px;
 		height: 100%;
-		//opacity: 0;
 		transition: opacity .3s ease-in;
 	}
 }
