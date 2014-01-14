@@ -686,7 +686,25 @@ HEADER STYLES
   text-decoration: none;
 }
 
-/* line 167, ../scss/_base.scss */
+/* line 168, ../scss/_base.scss */
+.small #logo {
+  font-size: 30px;
+}
+/* line 172, ../scss/_base.scss */
+.small #menu {
+  margin-top: 3px;
+}
+/* line 175, ../scss/_base.scss */
+.small #menu > li > a {
+  padding: 3px 6px;
+  font-size: 14px;
+}
+/* line 181, ../scss/_base.scss */
+.small .goup {
+  display: block;
+}
+
+/* line 187, ../scss/_base.scss */
 #logo {
   float: left;
   font-size: 72px;
@@ -697,22 +715,22 @@ HEADER STYLES
   -transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 176, ../scss/_base.scss */
+/* line 196, ../scss/_base.scss */
 #logo:hover {
   background-color: #24a259;
 }
-/* line 180, ../scss/_base.scss */
+/* line 200, ../scss/_base.scss */
 #logo a {
   display: inline-block;
   color: white;
   padding: 5px 10px;
 }
-/* line 186, ../scss/_base.scss */
+/* line 206, ../scss/_base.scss */
 #logo span {
   color: #2c3e50;
 }
 
-/* line 191, ../scss/_base.scss */
+/* line 211, ../scss/_base.scss */
 #menu {
   position: relative;
   display: inline-block;
@@ -721,11 +739,11 @@ HEADER STYLES
   padding-right: 10px;
   margin-top: 20px;
 }
-/* line 199, ../scss/_base.scss */
+/* line 219, ../scss/_base.scss */
 #menu li {
   display: inline-block;
 }
-/* line 203, ../scss/_base.scss */
+/* line 223, ../scss/_base.scss */
 #menu > li a {
   margin-left: 5px;
   padding: 3px 10px;
@@ -734,30 +752,28 @@ HEADER STYLES
   transition: all 0.3s ease-in-out;
   background-color: #229955;
 }
-/* line 208, ../scss/_base.scss */
+/* line 228, ../scss/_base.scss */
 #menu > li a:hover {
   background-color: #1e8449;
 }
-/* line 215, ../scss/_base.scss */
+/* line 235, ../scss/_base.scss */
 #menu > li > a {
-  padding: 11px 20px;
-  font-size: 19px;
   font-weight: 400;
 }
-/* line 220, ../scss/_base.scss */
+/* line 238, ../scss/_base.scss */
 #menu > li > a span {
   vertical-align: middle;
 }
-/* line 225, ../scss/_base.scss */
+/* line 243, ../scss/_base.scss */
 #menu > li:not(:last-child) {
   display: inline-block;
 }
-/* line 229, ../scss/_base.scss */
+/* line 247, ../scss/_base.scss */
 #menu a {
   color: white;
 }
 
-/* line 234, ../scss/_base.scss */
+/* line 252, ../scss/_base.scss */
 .goup {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -767,16 +783,13 @@ HEADER STYLES
   position: absolute;
   text-align: center;
   font-size: 35px;
-  width: 500px;
-  left: 50%;
-  margin-left: -250px;
 }
-/* line 238, ../scss/_base.scss */
+/* line 256, ../scss/_base.scss */
 .goup:hover {
   color: #cccccc;
 }
 
-/* line 254, ../scss/_base.scss */
+/* line 267, ../scss/_base.scss */
 #more-tags-area {
   display: block;
   opacity: 0;
@@ -790,23 +803,23 @@ HEADER STYLES
   position: absolute;
   background-color: rgba(255, 255, 255, 0.6);
 }
-/* line 268, ../scss/_base.scss */
+/* line 281, ../scss/_base.scss */
 #more-tags-area.open {
   opacity: 1;
   height: auto;
 }
 
-/* line 274, ../scss/_base.scss */
+/* line 287, ../scss/_base.scss */
 .social {
   text-align: right;
   border-bottom: 1px solid #cbd7e3;
   padding: 10px 10px;
 }
-/* line 279, ../scss/_base.scss */
+/* line 292, ../scss/_base.scss */
 .social > div {
   display: inline-block;
 }
-/* line 283, ../scss/_base.scss */
+/* line 296, ../scss/_base.scss */
 .social p {
   margin: 0;
   padding-top: 3px;
@@ -814,67 +827,36 @@ HEADER STYLES
   color: #2c3e50;
 }
 
-/* line 291, ../scss/_base.scss */
-#container {
-  margin-top: 82px;
-}
-
-/* line 296, ../scss/_base.scss */
-.small #logo {
-  font-size: 30px;
-}
-/* line 300, ../scss/_base.scss */
-.small #menu {
-  margin-top: 3px;
-}
-/* line 303, ../scss/_base.scss */
-.small #menu > li > a {
-  padding: 3px 6px;
-  font-size: 14px;
-}
-/* line 309, ../scss/_base.scss */
-.small .goup {
-  display: block;
-}
-
-/* line 314, ../scss/_base.scss */
+/* line 305, ../scss/_base.scss */
 #main {
   padding-bottom: 80px;
 }
-/* line 316, ../scss/_base.scss */
+/* line 307, ../scss/_base.scss */
 #main > article {
   border-bottom: 1px solid #cbd7e3;
   padding-bottom: 2em;
   margin-top: 2em;
 }
-/* line 321, ../scss/_base.scss */
+/* line 312, ../scss/_base.scss */
 #main > article section {
   width: 540px;
   float: left;
 }
-/* line 326, ../scss/_base.scss */
-#main > article aside {
-  width: 320px;
-  float: right;
-}
 
-/* line 333, ../scss/_base.scss */
+/* line 319, ../scss/_base.scss */
 #inner-content {
   padding: 0 10px;
 }
 
-/* line 337, ../scss/_base.scss */
+/* line 323, ../scss/_base.scss */
 .article-header {
-  width: 540px;
   margin-bottom: 10px;
 }
-/* line 341, ../scss/_base.scss */
+/* line 326, ../scss/_base.scss */
 .article-header h1 {
-  float: left;
-  width: 440px;
   margin: 0;
 }
-/* line 346, ../scss/_base.scss */
+/* line 329, ../scss/_base.scss */
 .article-header h1 a {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -883,21 +865,20 @@ HEADER STYLES
   color: white;
   padding: 5px;
 }
-/* line 349, ../scss/_base.scss */
+/* line 332, ../scss/_base.scss */
 .article-header h1 a:hover {
   background-color: #1e8449;
 }
-/* line 359, ../scss/_base.scss */
+/* line 342, ../scss/_base.scss */
 .article-header .byline {
-  float: right;
   color: #aabdd1;
 }
 
-/* line 365, ../scss/_base.scss */
+/* line 347, ../scss/_base.scss */
 .tags {
   margin-left: -3px;
 }
-/* line 368, ../scss/_base.scss */
+/* line 350, ../scss/_base.scss */
 .tags a {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -909,18 +890,18 @@ HEADER STYLES
   margin: 3px;
   text-decoration: none;
 }
-/* line 371, ../scss/_base.scss */
+/* line 353, ../scss/_base.scss */
 .tags a:hover {
   background-color: #1e8449;
 }
 
-/* line 386, ../scss/_base.scss */
+/* line 368, ../scss/_base.scss */
 .entry-content img {
   height: 100%;
   transition: opacity .3s ease-in;
 }
 
-/* line 393, ../scss/_base.scss */
+/* line 375, ../scss/_base.scss */
 .post-social a {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -932,72 +913,41 @@ HEADER STYLES
   border: 1px solid #dce4ec;
   margin-bottom: 5px;
 }
-/* line 396, ../scss/_base.scss */
+/* line 378, ../scss/_base.scss */
 .post-social a:hover {
   color: white;
   background-color: #2c3e50;
 }
-/* line 408, ../scss/_base.scss */
+/* line 390, ../scss/_base.scss */
 .post-social a .icon {
   vertical-align: middle;
 }
-/* line 412, ../scss/_base.scss */
+/* line 394, ../scss/_base.scss */
 .post-social a.dokul {
-  width: 312px;
-  height: 60px;
-  font-size: 32px;
-  line-height: 60px;
   font-weight: 500;
 }
-/* line 421, ../scss/_base.scss */
-.post-social > a {
-  width: 75px;
-  height: 75px;
-  line-height: 65px;
-  font-size: 50px;
-}
 
-/* line 429, ../scss/_base.scss */
-.vote-container {
-  display: inline-block;
-  width: 60px;
-  color: rgba(44, 62, 80, 0.5);
-  vertical-align: middle;
-  margin-top: -18px;
-}
-/* line 436, ../scss/_base.scss */
-.vote-container a {
-  height: 28px;
-  line-height: 25px;
-  font-size: 30px;
-}
-
-/* line 443, ../scss/_base.scss */
-.vote-down {
-  margin-top: 4px;
-}
-
-/* line 447, ../scss/_base.scss */
+/* line 402, ../scss/_base.scss */
 .post-comments {
   margin-top: 15px;
   padding: 10px;
 }
 
-/* line 452, ../scss/_base.scss */
+/* line 407, ../scss/_base.scss */
 .pagination {
   width: 100%;
   text-align: center;
 }
-/* line 455, ../scss/_base.scss */
+/* line 410, ../scss/_base.scss */
 .pagination ul {
   display: inline-block;
 }
-/* line 458, ../scss/_base.scss */
+/* line 413, ../scss/_base.scss */
 .pagination li {
   display: inline-block;
   margin: 0 3px;
 }
-/* line 462, ../scss/_base.scss */
+/* line 417, ../scss/_base.scss */
 .pagination li a, .pagination li span {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -1007,14 +957,14 @@ HEADER STYLES
   padding: 2px 6px;
   text-decoration: none;
 }
-/* line 465, ../scss/_base.scss */
+/* line 420, ../scss/_base.scss */
 .pagination li a:hover, .pagination li span:hover {
   background-color: #1e8449;
 }
 
-/* line 477, ../scss/_base.scss */
+/* line 432, ../scss/_base.scss */
 #infscr-loading {
-  width: 540px;
+  width: 100%;
   height: 40px;
   padding: 10px;
   font-weight: 300;
@@ -1030,7 +980,7 @@ This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. Let's call them
 tweeners.
 */
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 320px) {
   /******************************************************************
   Site Name: 
   Author: 
@@ -1047,72 +997,109 @@ tweeners.
   upon your base.scss styles.
   
   ******************************************************************/
-  /*********************
-  NAVIGATION STYLES
-  *********************/
-  /* .menu is clearfixed inside mixins.scss */
-  /* line 27, ../scss/_481up.scss */
-  .menu {
-    /* end .menu ul */
+  /* line 17, ../scss/_481up.scss */
+  .header {
+    height: 50px;
   }
-  /* line 28, ../scss/_481up.scss */
-  .menu ul {
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */
+  /* line 20, ../scss/_481up.scss */
+  .header.small {
+    height: 42px;
   }
+
+  /* line 25, ../scss/_481up.scss */
+  .goup {
+    right: 20px;
+  }
+
   /* line 29, ../scss/_481up.scss */
-  .menu ul li {
-    /*
-    plan your menus and drop-downs wisely.
-    */
-  }
-  /* line 30, ../scss/_481up.scss */
-  .menu ul li a {
-    /*
-    you can use hover styles here even though this size
-    has the possibility of being a mobile device.
-    */
+  #container {
+    margin-top: 42px;
   }
 
-  /* end .menu */
-  /*********************
-  POSTS & CONTENT STYLES
-  *********************/
-  /* entry content */
-  /* line 75, ../scss/_481up.scss */
-  .entry-content {
-    /* at this larger size, we can start to align images */
+  /* line 33, ../scss/_481up.scss */
+  #logo {
+    font-size: 36px;
   }
-  /* line 79, ../scss/_481up.scss */
-  .entry-content .alignleft, .entry-content img.alignleft {
-    margin-right: 1.5em;
-    display: inline;
-    float: left;
+
+  /* line 37, ../scss/_481up.scss */
+  #menu {
+    display: none;
+    margin-top: 7px;
   }
+  /* line 41, ../scss/_481up.scss */
+  #menu > li > a {
+    padding: 3px 5px;
+    font-size: 12px;
+  }
+
+  /* line 47, ../scss/_481up.scss */
+  .social p {
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+
+  /* line 53, ../scss/_481up.scss */
+  .wrap {
+    max-width: 100%;
+  }
+
+  /* line 59, ../scss/_481up.scss */
+  #main > article aside {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  /* line 64, ../scss/_481up.scss */
+  #main > article section {
+    width: 100%;
+  }
+
+  /* line 70, ../scss/_481up.scss */
+  .article-header {
+    width: 100%;
+  }
+  /* line 73, ../scss/_481up.scss */
+  .article-header h1 {
+    float: none;
+  }
+  /* line 77, ../scss/_481up.scss */
+  .article-header .byline {
+    float: none;
+    margin-top: 10px;
+  }
+
   /* line 84, ../scss/_481up.scss */
-  .entry-content .alignright, .entry-content img.alignright {
-    margin-left: 1.5em;
-    display: inline;
-    float: right;
-  }
-  /* line 89, ../scss/_481up.scss */
-  .entry-content .aligncenter, .entry-content img.aligncenter {
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-    clear: both;
+  .entry-content img {
+    width: 100%;
   }
 
-  /* end .entry-content */
-  /*********************
-  FOOTER STYLES
-  *********************/
-  /*
-  check your menus here. do they look good?
-  do they need tweaking?
-  */
-  /* end .footer-links */
+  /* line 90, ../scss/_481up.scss */
+  .post-social a {
+    width: 60px;
+    height: 60px;
+    line-height: 50px;
+    font-size: 40px;
+  }
+  /* line 96, ../scss/_481up.scss */
+  .post-social a.dokul {
+    width: 252px;
+    height: 60px;
+    line-height: 55px;
+  }
+}
+@media only screen and (min-width: 505px) {
+  /* line 50, ../scss/style.scss */
+  #menu {
+    display: block;
+  }
+
+  /* line 54, ../scss/style.scss */
+  .goup {
+    width: 500px;
+    left: 50%;
+    margin-left: -250px;
+  }
 }
 /*
 TABLET & SMALLER LAPTOPS
@@ -1245,19 +1232,82 @@ you can add resource intensive styles.
   come into play. Have fun!
   
   ******************************************************************/
-  /* line 16, ../scss/_768up.scss */
+  /* line 14, ../scss/_768up.scss */
+  .header {
+    height: 82px;
+  }
+  /* line 17, ../scss/_768up.scss */
+  .header.small {
+    height: 42px;
+  }
+
+  /* line 22, ../scss/_768up.scss */
+  #container {
+    margin-top: 82px;
+  }
+
+  /* line 26, ../scss/_768up.scss */
+  #logo {
+    font-size: 72px;
+  }
+
+  /* line 30, ../scss/_768up.scss */
+  #menu {
+    margin-top: 20px;
+  }
+  /* line 33, ../scss/_768up.scss */
+  #menu > li > a {
+    padding: 11px 20px;
+    font-size: 19px;
+  }
+
+  /* line 39, ../scss/_768up.scss */
+  .social p {
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  /* line 44, ../scss/_768up.scss */
   .wrap {
     max-width: 768px;
   }
 
-  /* line 22, ../scss/_768up.scss */
+  /* line 50, ../scss/_768up.scss */
+  #main > article aside {
+    width: 160px;
+  }
+  /* line 53, ../scss/_768up.scss */
   #main > article section {
-    width: 400px;
+    width: 540px;
   }
 
-  /* line 30, ../scss/_768up.scss */
+  /* line 60, ../scss/_768up.scss */
+  .article-header h1 {
+    float: left;
+  }
+  /* line 64, ../scss/_768up.scss */
+  .article-header .byline {
+    float: right;
+  }
+
+  /* line 71, ../scss/_768up.scss */
   .entry-content img {
-    width: 400px;
+    width: 540px;
+  }
+
+  /* line 77, ../scss/_768up.scss */
+  .post-social a {
+    width: 75px;
+    height: 75px;
+    line-height: 65px;
+    font-size: 50px;
+  }
+  /* line 83, ../scss/_768up.scss */
+  .post-social a.dokul {
+    width: 154px;
+    height: 60px;
+    font-size: 25px;
+    line-height: 60px;
   }
 }
 /*
@@ -1283,13 +1333,31 @@ you can add resource intensive styles.
   }
 
   /* line 18, ../scss/_1030up.scss */
+  #main > article aside {
+    width: 320px;
+    float: right;
+  }
+  /* line 23, ../scss/_1030up.scss */
   #main > article section {
     width: 540px;
   }
 
-  /* line 26, ../scss/_1030up.scss */
+  /* line 29, ../scss/_1030up.scss */
+  .article-header {
+    width: 540px;
+  }
+
+  /* line 35, ../scss/_1030up.scss */
   .entry-content img {
     width: 540px;
+  }
+
+  /* line 42, ../scss/_1030up.scss */
+  .post-social a.dokul {
+    width: 312px;
+    height: 60px;
+    font-size: 32px;
+    line-height: 60px;
   }
 }
 /*

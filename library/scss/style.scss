@@ -37,10 +37,25 @@ This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. Let's call them
 tweeners.
 */
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 320px) {
 
 	// styles in 481up.scss
+
 	@import "481up";
+
+} // end of media query
+
+@media only screen and (min-width: 505px) {
+
+	#menu {
+		display: block;
+	}
+
+	.goup {
+		width: 500px;
+		left: 50%;
+		margin-left: -250px;
+	}
 
 } // end of media query
 

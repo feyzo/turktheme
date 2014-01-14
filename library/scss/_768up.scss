@@ -11,7 +11,35 @@ and other resources. You'll also notice the grid starts to
 come into play. Have fun!
 
 ******************************************************************/
+.header { 
+	height: 82px;
 
+	&.small {
+		height: 42px;
+	}
+}
+
+#container {
+	margin-top: 82px;
+}
+
+#logo {
+	font-size: 72px;
+}
+
+#menu {
+	margin-top: 20px;
+	
+	> li > a {
+		padding: 11px 20px;
+		font-size: 19px;
+	}
+}
+
+.social p {
+	width: auto;
+	margin-bottom: 0;
+}
 
 .wrap {
 	max-width: 768px;
@@ -19,15 +47,44 @@ come into play. Have fun!
 
 #main {
 	> article {
-		section {
-			width: 400px;
+		aside {
+			width: 160px;
 		}
+		section {
+			width: 540px;
+		}
+	}
+}
+
+.article-header {
+	h1 {
+		float: left;
+	}
+	
+	.byline {
+		float: right;
 	}
 }
 
 .entry-content {
 
 	img {
-		width: 400px;
+		width: 540px;
+	}
+}
+
+.post-social {
+	a {
+		width: 75px;
+		height: 75px;
+		line-height: 65px;
+		font-size: 50px;
+
+		&.dokul {
+			width: 154px;
+			height: 60px;
+			font-size: 25px;
+			line-height: 60px;
+		}
 	}
 }

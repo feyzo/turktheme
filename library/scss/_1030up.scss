@@ -15,15 +15,35 @@ be seen on the Desktop.
 
 #main {
 	> article {
+		aside {
+			width: 320px;
+			float: right;
+		}
+
 		section {
 			width: 540px;
 		}
 	}
 }
 
+.article-header {
+	width: 540px;
+}
+
 .entry-content {
 
 	img {
 		width: 540px;
+	}
+}
+
+.post-social {
+	a {
+		&.dokul {
+			width: 312px;
+			height: 60px;
+			font-size: 32px;
+			line-height: 60px;
+		}
 	}
 }
