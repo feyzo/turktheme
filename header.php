@@ -15,9 +15,6 @@
 
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&subset=latin-ext' rel='stylesheet' type='text/css'>
 		<link rel='stylesheet' id='turktheme-css' href='http://test.turkgif.com/wp-content/themes/turktheme/inc/final.min.css' type='text/css' media='all' />
-
-		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-
 		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 		<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
 		<link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png" />

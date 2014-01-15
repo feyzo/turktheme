@@ -27,7 +27,7 @@ if (!window.getComputedStyle) {
 	}
 }
 
-(function($){
+(function($){ 
 
     /**
      * Copyright 2012, Digital Fusion
@@ -69,64 +69,6 @@ if (!window.getComputedStyle) {
 
 })(jQuery);
 
-/**
- * jQuery Unveil
- * A very lightweight jQuery plugin to lazy load images
- * http://luis-almeida.github.com/unveil
- *
- * Licensed under the MIT license.
- * Copyright 2013 Luís Almeida
- * https://github.com/luis-almeida
- */
-
-;(function($) {
-
-  $.fn.unveil = function(threshold, callback) {
-
-    var $w = $(window),
-        th = threshold || 0,
-        retina = window.devicePixelRatio > 1,
-        attrib = retina? "data-src-retina" : "data-src",
-        images = this,
-        loaded;
-
-    this.one("unveil", function() {
-      var source = this.getAttribute(attrib);
-      source = source || this.getAttribute("data-src");
-      if (source) {
-        this.setAttribute("src", source);
-        if (typeof callback === "function") callback.call(this);
-      }
-    });
-
-    function unveil() {
-      var inview = images.filter(function() {
-        var $e = $(this);
-        if ($e.is(":hidden")) return;
-
-        var wt = $w.scrollTop(),
-            wb = wt + $w.height(),
-            et = $e.offset().top,
-            eb = et + $e.height();
-
-        return eb >= wt - th && et <= wb + th;
-      });
-
-      loaded = inview.trigger("unveil");
-      images = images.not(loaded);
-    }
-
-    $w.scroll(unveil);
-    $w.resize(unveil);
-
-    unveil();
-
-    return this;
-
-  };
-
-})(window.jQuery || window.Zepto);
-
 var maxPageNumber = parseInt($('a.page-numbers:not(.next):last').html()),
 currentPageNumber = parseInt($('.page-numbers.current').html());
 
@@ -162,9 +104,6 @@ jQuery(document).ready(function($) {
 	if (responsive_viewport > 1030) {
 	
 	}
-	
-	//TODO
-	//$("#main img").unveil(200);
 	
 	setTimeout(function () {
         window.scrollTo(0, 1);
@@ -202,11 +141,10 @@ jQuery(document).ready(function($) {
 		bufferPx: 600,
 		maxPage: maxPageNumber,
 		path: function (i) {
-			return '/page/' + i + '/';
+			return 'page/' + i + '/';
 		}
 	}, function(newElements, data, url) {
 		currentPageNumber++;
-		//$("#main img").unveil(200);
 	});
 	//infinite scroll
 
@@ -224,7 +162,7 @@ jQuery(document).ready(function($) {
     $(".goup").on("click", function() {
 		$('html, body').animate({scrollTop: 0}, 500);
 	});
-    
+      
 
 	//menu scroll
  

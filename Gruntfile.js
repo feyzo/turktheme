@@ -5,8 +5,8 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       scripts: {
-        files: ['library/js/*'],
-        tasks: ['concat']
+        files: ['library/js/scripts.js'],
+        tasks: ['concat', 'uglify']
       },
       css: {
         files: 'library/scss/*',
@@ -26,8 +26,8 @@ module.exports = function(grunt) {
     },
     uglify: {
       build: {
-        src: ['library/js/scripts.js'],
-        dest: 'library/js/scripts.min.js'
+        src: ['inc/final.min.js'],
+        dest: 'inc/final.min.js'
       }
     },
     compass: {                  
@@ -47,12 +47,12 @@ module.exports = function(grunt) {
     }
   });
 
-  //grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   
-  //grunt.registerTask('default', [ 'uglify', 'concat', 'compass', 'cssmin', 'watch']);
-  grunt.registerTask('default', [ 'concat', 'compass', 'cssmin', 'watch']);
+  grunt.registerTask('default', [ 'concat', 'uglify', 'compass', 'cssmin', 'watch']);
+  //grunt.registerTask('default', [ 'concat', 'compass', 'cssmin', 'watch']);
 };
