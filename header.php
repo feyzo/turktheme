@@ -6,7 +6,6 @@
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" class="no-js"><!--<![endif]-->
 
 	<head>
-		<meta name="robots" content="nofollow,noindex" />
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="HandheldFriendly" content="True">
@@ -14,7 +13,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&subset=latin-ext' rel='stylesheet' type='text/css'>
-		<link rel='stylesheet' id='turktheme-css' href='http://test.turkgif.com/wp-content/themes/turktheme/inc/final.min.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='turktheme-css' href='http://turkgif.com/wp-content/themes/turktheme/inc/final.min.css' type='text/css' media='all' />
 		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 		<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
 		<link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png" />
@@ -35,10 +34,10 @@
 		
 		<meta name="msapplication-TileColor" content="#27AE60">
 		<meta name="msapplication-TileImage" content="win8-tile-icon.png">
-		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Feed" href="http://test.turkgif.com/feed/" />
-		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Comments Feed" href="http://test.turkgif.com/comments/feed/" />
+		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Feed" href="http://turkgif.com/feed/" />
+		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Comments Feed" href="http://turkgif.com/comments/feed/" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Feed" href="http://test.turkgif.com/feed/" />
+		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Feed" href="http://turkgif.com/feed/" />
 		
 		<?php if (is_single()) : if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -74,14 +73,14 @@
 			<title>TürkGif</title>
 			<meta name="title" content="TürkGif" />
 			<meta name="keyword" content="turk,türk,gif,türkgif,turkgif,türkiye,türkiyeden,gifler" />
-			<meta property="og:url" content="http://test.turkgif.com"/>  
+			<meta property="og:url" content="http://turkgif.com"/>  
 			<meta property="og:title" content="TürkGif" />
 			<meta property="og:type" content="website" />  
-			<meta property="og:image" content="http://test.turkgif.com/logo_300x300.gif" />  
+			<meta property="og:image" content="http://turkgif.com/logo_300x300.gif" />  
 
 			<meta name="twitter:card" content="photo">
 			<meta name="twitter:title" content="TürkGif">
-			<meta name="twitter:image" content="http://test.turkgif.com/logo_300x300.gif" />
+			<meta name="twitter:image" content="http://turkgif.com/logo_300x300.gif" />
 		
 		<?php endif; ?>
 			<meta name="description" content="Sadece Türkiye'den gifler." />
