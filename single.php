@@ -7,7 +7,15 @@
 					<div id="main" class="twelvecol first clearfix" role="main">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php 
+								$str = get_the_content();
 
+								$pattern = '/<a href="(.+)">/';
+
+								preg_match($pattern, $str, $matches);
+
+								$imgurl = $matches[1];
+							?>	
 						<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 
 							<header class="article-header clearfix">
@@ -39,7 +47,7 @@
 
 										<a href="https://twitter.com/intent/tweet?text=<?php esc_url(the_title_attribute()) ?>&url=<?php esc_url(the_permalink())?>&via=turkgif&related=turkgif" target="_blank" class="post-twitter"><span class="icon icon-twitter"></span></a>
 
-										<a href="http://www.tumblr.com/share/photo?source=<?php echo esc_url(wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID))) ?>&caption=<?php echo urlencode(the_title_attribute()) ?>&clickthru=<?php echo urlencode(the_permalink()) ?>" target="_blank" class="post-tumblr"><span class="icon icon-tumblr"></span></a>
+										<a href="http://www.tumblr.com/share/photo?source=<?php echo esc_url($imgurl) ?>&caption=<?php echo urlencode(the_title_attribute()) ?>&clickthru=<?php echo urlencode(the_permalink()) ?>" target="_blank" class="post-tumblr"><span class="icon icon-tumblr"></span></a>
 										
 										<a href="mailto:arkadas@adresi.com?Subject=<?php echo esc_url(the_title_attribute()) ?>&Body=<?php echo urlencode(the_permalink()) ?>" target="_blank" class="post-mail"><span class="icon icon-mail"></span></a>
 									</div>

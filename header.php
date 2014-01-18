@@ -13,23 +13,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&subset=latin-ext' rel='stylesheet' type='text/css'>
-		<link rel='stylesheet' id='turktheme-css' href='http://turkgif.com/wp-content/themes/turktheme/inc/final.min.css' type='text/css' media='all' />
-		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
-		<link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png" />
-		<link rel="apple-touch-icon" sizes="60x60" href="../apple-touch-icon-60x60.png" />
-		<link rel="apple-touch-icon" sizes="72x72" href="../apple-touch-icon-72x72.png" />
-		<link rel="apple-touch-icon" sizes="76x76" href="../apple-touch-icon-76x76.png" />
-		<link rel="apple-touch-icon" sizes="114x114" href="../apple-touch-icon-114x114.png" />
-		<link rel="apple-touch-icon" sizes="120x120" href="../apple-touch-icon-120x120.png" />
-		<link rel="apple-touch-icon" sizes="144x144" href="../apple-touch-icon-144x144.png" />
-		<link rel="apple-touch-icon" sizes="152x152" href="../apple-touch-icon-152x152.png" />
+		<link rel='stylesheet' id='turktheme-css' href='http://assets.cdn.turkgif.com/inc/final.min.css' type='text/css' media='all' />
+		
+		<link rel="shortcut icon" href="http://meta.cdn.turkgif.com/meta/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="http://meta.cdn.turkgif.com/meta/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="57x57" href="http://meta.cdn.turkgif.com/meta/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="http://meta.cdn.turkgif.com/meta/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="http://meta.cdn.turkgif.com/meta/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="http://meta.cdn.turkgif.com/meta/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="http://meta.cdn.turkgif.com/meta/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="http://meta.cdn.turkgif.com/meta/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="http://meta.cdn.turkgif.com/meta/apple-touch-icon-152x152.png" />
 
 		<!--[if IE]>
-			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+			<link rel="shortcut icon" href="http://meta.cdn.turkgif.com/meta/favicon.ico" type="image/x-icon" />
 		<![endif]-->
 		<!--[if lt IE 9]>
-			<script src="../wp-content/themes/turktheme/inc/html5shiv.js"></script>
+			<script src="http://assets1.cdn.turkgif.com/inc/wp-content/themes/turktheme/inc/html5shiv.js"></script>
 		<![endif]-->
 		
 		<meta name="msapplication-TileColor" content="#27AE60">
@@ -40,8 +40,17 @@
 		<link rel="alternate" type="application/rss+xml" title="Türk Gif &raquo; Feed" href="http://turkgif.com/feed/" />
 		
 		<?php if (is_single()) : if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php 
+				$str = get_the_content();
 
+				$pattern = '/<a href="(.+)">/';
+
+				preg_match($pattern, $str, $matches);
+
+				$imgurl = $matches[1];
+			?>
 			<title>TürkGif - <?php the_title(); ?></title>
+
 			<meta name="title" content="TürkGif - <?php the_title(); ?>" />
 			<meta name="keyword" content="<?php
 				$keywords = get_the_tags();
@@ -55,19 +64,11 @@
 			<meta property="og:url" content="<?php the_permalink() ?>"/>  
 			<meta property="og:title" content="<?php single_post_title(''); ?>" />  
 			<meta property="og:type" content="article" />  
-			<meta property="og:image" content="<?php
-
-			if (function_exists('wp_get_attachment_thumb_url')) {
-				echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); 
-			}?>" />   
+			<meta property="og:image" content="<?php echo $imgurl; ?>" />   
 
 			<meta name="twitter:card" content="photo">
 			<meta name="twitter:title" content="TürkGif - <?php the_title(); ?>">
-			<meta name="twitter:image" content="<?php
-
-			if (function_exists('wp_get_attachment_thumb_url')) {
-				echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); 
-			}?>" />
+			<meta name="twitter:image" content="<?php echo $imgurl; ?>" />
 
 		<?php endwhile; endif; elseif(is_home()) : ?>
 			<title>TürkGif</title>
@@ -103,7 +104,7 @@
 						<div id="logo"><a href="/" rel="nofollow">Türk<span>Gif</span></a></div>
 						<a href="javascript:;" class="goup icon icon-arrow-up"></a>
 						<ul id="menu">
-							<li><a href="iletisim">İLETİŞİM</a></li>
+							<li><a href="/iletisim/">İLETİŞİM</a></li>
 							<li><a id="more-tags" href="javascript:;">DAHA FAZLA <span class="icon icon-arrow-down"></span></a></li>
 							<li id="more-tags-area">
 								<?php

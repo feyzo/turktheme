@@ -4,7 +4,7 @@
 
 				<div id="inner-content" class="wrap clearfix">
 
-						<div id="main" class="eightcol first clearfix" role="main">
+						<div id="main" class="twelvecol first clearfix" role="main">
 
 							<?php if (is_category()) { ?>
 								<h1 class="archive-title h2">
@@ -43,55 +43,57 @@
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
+								<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
+									<header class="article-header clearfix">
 
-								<header class="article-header">
+										<h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+										<p class="byline vcard"><?php
+											printf( __( '<time class="updated" datetime="%1$s" pubdate>%2$s</time>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')));
+										?></p>
 
-									<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									<p class="byline vcard"><?php
-										printf(__( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(__( 'F jS, Y', 'bonestheme' )), bones_get_the_author_posts_link(), get_the_category_list(', '));
-									?></p>
+									</header>
+									<div class="clearfix">
+										<section class="entry-content clearfix">
+											<a href="<?php the_permalink() ?>">
+												<?php 
+													$post_content = get_the_content();
+													$post_content = preg_replace( "|<a *href=\"(.*)\">(.*)</a>|", "\\2", $post_content );
+													echo $post_content
+												?>
+											</a>
+										</section>
 
-								</header>
+										<aside class="clearfix">
+											<div class="post-social">
+												<a href="https://www.facebook.com/sharer/sharer.php?u=<?php esc_url(the_permalink()) ?>" target="_blank" class="post-facebook"><span class="icon icon-facebook"></span></a>
 
-								<section class="entry-content clearfix">
+												<a href="https://twitter.com/intent/tweet?text=<?php esc_url(the_title_attribute()) ?>&url=<?php esc_url(the_permalink())?>&via=turkgif&related=turkgif" target="_blank" class="post-twitter"><span class="icon icon-twitter"></span></a>
 
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+												<a href="http://www.tumblr.com/share/photo?source=<?php echo esc_url(wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID))) ?>&caption=<?php echo urlencode(the_title_attribute()) ?>&clickthru=<?php echo urlencode(the_permalink()) ?>" target="_blank" class="post-tumblr"><span class="icon icon-tumblr"></span></a>
+												
+												<a href="mailto:arkadas@adresi.com?Subject=<?php echo esc_url(the_title_attribute()) ?>&Body=<?php echo urlencode(the_permalink()) ?>" target="_blank" class="post-mail"><span class="icon icon-mail"></span></a>
+											
+												<a href="<?php the_permalink() ?>#dokul" class="dokul">Dök içini <span class="icon icon-bubbles"></span></a>
+												
+											</div>
 
-									<?php the_excerpt(); ?>
-
-								</section>
-
-								<footer class="article-footer">
-
-								</footer>
-
-							</article>
+											<p class="tags"><?php the_tags( __( '', 'bonestheme' ) , '', '' ); ?></p>
+										</aside>
+									</div>
+								</article>
 
 							<?php endwhile; ?>
-
-									<?php if ( function_exists( 'bones_page_navi' ) ) { ?>
-										<?php bones_page_navi(); ?>
-									<?php } else { ?>
-										<nav class="wp-prev-next">
-											<ul class="clearfix">
-												<li class="prev-link"><?php next_posts_link( __( '&laquo; Older Entries', 'bonestheme' )) ?></li>
-												<li class="next-link"><?php previous_posts_link( __( 'Newer Entries &raquo;', 'bonestheme' )) ?></li>
-											</ul>
-										</nav>
-									<?php } ?>
-
 							<?php else : ?>
 
 									<article id="post-not-found" class="hentry clearfix">
-										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+											<header class="article-header">
+												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 										</header>
-										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+											<section class="entry-content">
+												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the archive.php template.', 'bonestheme' ); ?></p>
+												<p><?php _e( 'This is the error message in the index.php template.', 'bonestheme' ); ?></p>
 										</footer>
 									</article>
 

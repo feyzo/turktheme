@@ -224,91 +224,91 @@ so you still want to keep it pretty light and simply expand
 upon your base.scss styles.
 
 ******************************************************************/
-/* line 17, ../scss/_481up.scss */
-.header {
-  height: 50px;
+/* line 18, ../scss/_481up.scss */
+.small #menu {
+  margin-top: -1px;
 }
-/* line 20, ../scss/_481up.scss */
-.header.small {
-  height: 42px;
+/* line 21, ../scss/_481up.scss */
+.small #logo {
+  font-size: 23px;
 }
 
-/* line 25, ../scss/_481up.scss */
+/* line 26, ../scss/_481up.scss */
 .goup {
   right: 20px;
 }
 
-/* line 29, ../scss/_481up.scss */
+/* line 30, ../scss/_481up.scss */
 #container {
   margin-top: 42px;
 }
 
-/* line 33, ../scss/_481up.scss */
+/* line 34, ../scss/_481up.scss */
 #logo {
   font-size: 36px;
 }
 
-/* line 37, ../scss/_481up.scss */
+/* line 38, ../scss/_481up.scss */
 #menu {
   display: none;
   margin-top: 7px;
 }
-/* line 41, ../scss/_481up.scss */
+/* line 42, ../scss/_481up.scss */
 #menu > li > a {
   padding: 3px 5px;
   font-size: 12px;
 }
 
-/* line 47, ../scss/_481up.scss */
+/* line 48, ../scss/_481up.scss */
 .social p {
   width: 100%;
   margin-bottom: 5px;
   text-align: left;
 }
 
-/* line 53, ../scss/_481up.scss */
+/* line 54, ../scss/_481up.scss */
 .wrap {
   max-width: 100%;
 }
 
-/* line 59, ../scss/_481up.scss */
+/* line 60, ../scss/_481up.scss */
 #main > article aside {
   width: 100%;
   text-align: center;
   margin-top: 10px;
 }
-/* line 64, ../scss/_481up.scss */
+/* line 65, ../scss/_481up.scss */
 #main > article section {
   width: 100%;
 }
 
-/* line 70, ../scss/_481up.scss */
+/* line 71, ../scss/_481up.scss */
 .article-header {
   width: 100%;
 }
-/* line 73, ../scss/_481up.scss */
+/* line 74, ../scss/_481up.scss */
 .article-header h1 {
   float: none;
 }
-/* line 77, ../scss/_481up.scss */
+/* line 78, ../scss/_481up.scss */
 .article-header .byline {
   float: none;
   margin-top: 10px;
 }
 
-/* line 84, ../scss/_481up.scss */
+/* line 85, ../scss/_481up.scss */
 .entry-content img {
   width: 100%;
 }
 
-/* line 90, ../scss/_481up.scss */
+/* line 91, ../scss/_481up.scss */
 .post-social a {
   width: 60px;
   height: 60px;
   line-height: 50px;
   font-size: 40px;
 }
-/* line 96, ../scss/_481up.scss */
+/* line 97, ../scss/_481up.scss */
 .post-social a.dokul {
   width: 252px;
   height: 60px;
@@ -329,76 +329,81 @@ come into play. Have fun!
 
 ******************************************************************/
 /* line 14, ../scss/_768up.scss */
-.header {
-  height: 82px;
-}
-/* line 17, ../scss/_768up.scss */
-.header.small {
-  height: 42px;
-}
-
-/* line 22, ../scss/_768up.scss */
 #container {
   margin-top: 82px;
 }
 
-/* line 26, ../scss/_768up.scss */
+/* line 19, ../scss/_768up.scss */
+.small #menu {
+  margin-top: 3px;
+}
+/* line 22, ../scss/_768up.scss */
+.small #menu > li > a {
+  padding: 3px 6px;
+  font-size: 14px;
+}
+/* line 27, ../scss/_768up.scss */
+.small #logo {
+  font-size: 30px;
+}
+
+/* line 32, ../scss/_768up.scss */
 #logo {
   font-size: 72px;
 }
 
-/* line 30, ../scss/_768up.scss */
+/* line 36, ../scss/_768up.scss */
 #menu {
   margin-top: 20px;
 }
-/* line 33, ../scss/_768up.scss */
+/* line 39, ../scss/_768up.scss */
 #menu > li > a {
   padding: 11px 20px;
   font-size: 19px;
 }
 
-/* line 39, ../scss/_768up.scss */
+/* line 45, ../scss/_768up.scss */
 .social p {
   width: auto;
   margin-bottom: 0;
 }
 
-/* line 44, ../scss/_768up.scss */
+/* line 50, ../scss/_768up.scss */
 .wrap {
   max-width: 768px;
 }
 
-/* line 50, ../scss/_768up.scss */
+/* line 56, ../scss/_768up.scss */
 #main > article aside {
   width: 160px;
 }
-/* line 53, ../scss/_768up.scss */
+/* line 59, ../scss/_768up.scss */
 #main > article section {
   width: 540px;
 }
 
-/* line 60, ../scss/_768up.scss */
+/* line 66, ../scss/_768up.scss */
 .article-header h1 {
   float: left;
 }
-/* line 64, ../scss/_768up.scss */
+/* line 70, ../scss/_768up.scss */
 .article-header .byline {
   float: right;
 }
 
-/* line 71, ../scss/_768up.scss */
+/* line 77, ../scss/_768up.scss */
 .entry-content img {
   width: 540px;
 }
 
-/* line 77, ../scss/_768up.scss */
+/* line 83, ../scss/_768up.scss */
 .post-social a {
   width: 75px;
   height: 75px;
   line-height: 65px;
   font-size: 50px;
 }
-/* line 83, ../scss/_768up.scss */
+/* line 89, ../scss/_768up.scss */
 .post-social a.dokul {
   width: 154px;
   height: 60px;

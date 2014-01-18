@@ -526,20 +526,20 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
-/* line 18, ../scss/_base.scss */
+@font-face {
+  font-family: 'turkgif';
+  src: url("fonts/turkgif.eot");
+  src: url("fonts/turkgif.eot?#iefix") format("embedded-opentype"), url("fonts/turkgif.woff") format("woff"), url("fonts/turkgif.ttf") format("truetype"), url("fonts/turkgif.svg#turkgifregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 29, ../scss/_base.scss */
 body {
   font-family: "Ubuntu", Helvetica, Arial, sans-serif;
   font-size: 100%;
   font-weight: 300;
   color: #000;
-}
-
-@font-face {
-  font-family: 'turkgif';
-  src: url("fonts/turkgif.eot");
-  src: url("fonts/turkgif.eot?#iefix") format("embedded-opentype"), url("fonts/turkgif.woff") format("woff"), url("fonts/turkgif.ttf") format("truetype"), url("fonts/turkgif.svg#turkgif") format("svg");
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* line 36, ../scss/_base.scss */
@@ -687,24 +687,11 @@ HEADER STYLES
 }
 
 /* line 168, ../scss/_base.scss */
-.small #logo {
-  font-size: 30px;
-}
-/* line 172, ../scss/_base.scss */
-.small #menu {
-  margin-top: 3px;
-}
-/* line 175, ../scss/_base.scss */
-.small #menu > li > a {
-  padding: 3px 6px;
-  font-size: 14px;
-}
-/* line 181, ../scss/_base.scss */
 .small .goup {
   display: block;
 }
 
-/* line 187, ../scss/_base.scss */
+/* line 174, ../scss/_base.scss */
 #logo {
   float: left;
   font-size: 72px;
@@ -715,22 +702,22 @@ HEADER STYLES
   -transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 196, ../scss/_base.scss */
+/* line 183, ../scss/_base.scss */
 #logo:hover {
   background-color: #24a259;
 }
-/* line 200, ../scss/_base.scss */
+/* line 187, ../scss/_base.scss */
 #logo a {
   display: inline-block;
   color: white;
   padding: 5px 10px;
 }
-/* line 206, ../scss/_base.scss */
+/* line 193, ../scss/_base.scss */
 #logo span {
   color: #2c3e50;
 }
 
-/* line 211, ../scss/_base.scss */
+/* line 198, ../scss/_base.scss */
 #menu {
   position: relative;
   display: inline-block;
@@ -739,11 +726,11 @@ HEADER STYLES
   padding-right: 10px;
   margin-top: 20px;
 }
-/* line 219, ../scss/_base.scss */
+/* line 206, ../scss/_base.scss */
 #menu li {
   display: inline-block;
 }
-/* line 223, ../scss/_base.scss */
+/* line 210, ../scss/_base.scss */
 #menu > li a {
   margin-left: 5px;
   padding: 3px 10px;
@@ -752,28 +739,28 @@ HEADER STYLES
   transition: all 0.3s ease-in-out;
   background-color: #229955;
 }
-/* line 228, ../scss/_base.scss */
+/* line 215, ../scss/_base.scss */
 #menu > li a:hover {
   background-color: #1e8449;
 }
-/* line 235, ../scss/_base.scss */
+/* line 222, ../scss/_base.scss */
 #menu > li > a {
   font-weight: 400;
 }
-/* line 238, ../scss/_base.scss */
+/* line 225, ../scss/_base.scss */
 #menu > li > a span {
   vertical-align: middle;
 }
-/* line 243, ../scss/_base.scss */
+/* line 230, ../scss/_base.scss */
 #menu > li:not(:last-child) {
   display: inline-block;
 }
-/* line 247, ../scss/_base.scss */
+/* line 234, ../scss/_base.scss */
 #menu a {
   color: white;
 }
 
-/* line 252, ../scss/_base.scss */
+/* line 239, ../scss/_base.scss */
 .goup {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -784,12 +771,12 @@ HEADER STYLES
   text-align: center;
   font-size: 35px;
 }
-/* line 256, ../scss/_base.scss */
+/* line 243, ../scss/_base.scss */
 .goup:hover {
   color: #cccccc;
 }
 
-/* line 267, ../scss/_base.scss */
+/* line 254, ../scss/_base.scss */
 #more-tags-area {
   display: block;
   opacity: 0;
@@ -803,23 +790,23 @@ HEADER STYLES
   position: absolute;
   background-color: rgba(255, 255, 255, 0.6);
 }
-/* line 281, ../scss/_base.scss */
+/* line 268, ../scss/_base.scss */
 #more-tags-area.open {
   opacity: 1;
   height: auto;
 }
 
-/* line 287, ../scss/_base.scss */
+/* line 274, ../scss/_base.scss */
 .social {
   text-align: right;
   border-bottom: 1px solid #cbd7e3;
   padding: 10px 10px;
 }
-/* line 292, ../scss/_base.scss */
+/* line 279, ../scss/_base.scss */
 .social > div {
   display: inline-block;
 }
-/* line 296, ../scss/_base.scss */
+/* line 283, ../scss/_base.scss */
 .social p {
   margin: 0;
   padding-top: 3px;
@@ -827,36 +814,36 @@ HEADER STYLES
   color: #2c3e50;
 }
 
-/* line 305, ../scss/_base.scss */
+/* line 292, ../scss/_base.scss */
 #main {
   padding-bottom: 80px;
 }
-/* line 307, ../scss/_base.scss */
+/* line 294, ../scss/_base.scss */
 #main > article {
   border-bottom: 1px solid #cbd7e3;
   padding-bottom: 2em;
   margin-top: 2em;
 }
-/* line 312, ../scss/_base.scss */
+/* line 299, ../scss/_base.scss */
 #main > article section {
   width: 540px;
   float: left;
 }
 
-/* line 319, ../scss/_base.scss */
+/* line 306, ../scss/_base.scss */
 #inner-content {
   padding: 0 10px;
 }
 
-/* line 323, ../scss/_base.scss */
+/* line 310, ../scss/_base.scss */
 .article-header {
   margin-bottom: 10px;
 }
-/* line 326, ../scss/_base.scss */
+/* line 313, ../scss/_base.scss */
 .article-header h1 {
   margin: 0;
 }
-/* line 329, ../scss/_base.scss */
+/* line 316, ../scss/_base.scss */
 .article-header h1 a {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -865,20 +852,20 @@ HEADER STYLES
   color: white;
   padding: 5px;
 }
-/* line 332, ../scss/_base.scss */
+/* line 319, ../scss/_base.scss */
 .article-header h1 a:hover {
   background-color: #1e8449;
 }
-/* line 342, ../scss/_base.scss */
+/* line 329, ../scss/_base.scss */
 .article-header .byline {
   color: #aabdd1;
 }
 
-/* line 347, ../scss/_base.scss */
+/* line 334, ../scss/_base.scss */
 .tags {
   margin-left: -3px;
 }
-/* line 350, ../scss/_base.scss */
+/* line 337, ../scss/_base.scss */
 .tags a {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -890,18 +877,18 @@ HEADER STYLES
   margin: 3px;
   text-decoration: none;
 }
-/* line 353, ../scss/_base.scss */
+/* line 340, ../scss/_base.scss */
 .tags a:hover {
   background-color: #1e8449;
 }
 
-/* line 368, ../scss/_base.scss */
+/* line 355, ../scss/_base.scss */
 .entry-content img {
   height: 100%;
   transition: opacity .3s ease-in;
 }
 
-/* line 375, ../scss/_base.scss */
+/* line 362, ../scss/_base.scss */
 .post-social a {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -913,41 +900,41 @@ HEADER STYLES
   border: 1px solid #dce4ec;
   margin-bottom: 5px;
 }
-/* line 378, ../scss/_base.scss */
+/* line 365, ../scss/_base.scss */
 .post-social a:hover {
   color: white;
   background-color: #2c3e50;
 }
-/* line 390, ../scss/_base.scss */
+/* line 377, ../scss/_base.scss */
 .post-social a .icon {
   vertical-align: middle;
 }
-/* line 394, ../scss/_base.scss */
+/* line 381, ../scss/_base.scss */
 .post-social a.dokul {
   font-weight: 500;
 }
 
-/* line 402, ../scss/_base.scss */
+/* line 389, ../scss/_base.scss */
 .post-comments {
   margin-top: 15px;
   padding: 10px;
 }
 
-/* line 407, ../scss/_base.scss */
+/* line 394, ../scss/_base.scss */
 .pagination {
   width: 100%;
   text-align: center;
 }
-/* line 410, ../scss/_base.scss */
+/* line 397, ../scss/_base.scss */
 .pagination ul {
   display: inline-block;
 }
-/* line 413, ../scss/_base.scss */
+/* line 400, ../scss/_base.scss */
 .pagination li {
   display: inline-block;
   margin: 0 3px;
 }
-/* line 417, ../scss/_base.scss */
+/* line 404, ../scss/_base.scss */
 .pagination li a, .pagination li span {
   -webkit-transition: all 0.3s ease-in-out;
   -transition: all 0.3s ease-in-out;
@@ -957,12 +944,12 @@ HEADER STYLES
   padding: 2px 6px;
   text-decoration: none;
 }
-/* line 420, ../scss/_base.scss */
+/* line 407, ../scss/_base.scss */
 .pagination li a:hover, .pagination li span:hover {
   background-color: #1e8449;
 }
 
-/* line 432, ../scss/_base.scss */
+/* line 419, ../scss/_base.scss */
 #infscr-loading {
   width: 100%;
   height: 40px;
@@ -980,7 +967,7 @@ This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. Let's call them
 tweeners.
 */
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 0px) {
   /******************************************************************
   Site Name: 
   Author: 
@@ -997,91 +984,91 @@ tweeners.
   upon your base.scss styles.
   
   ******************************************************************/
-  /* line 17, ../scss/_481up.scss */
-  .header {
-    height: 50px;
+  /* line 18, ../scss/_481up.scss */
+  .small #menu {
+    margin-top: -1px;
   }
-  /* line 20, ../scss/_481up.scss */
-  .header.small {
-    height: 42px;
+  /* line 21, ../scss/_481up.scss */
+  .small #logo {
+    font-size: 23px;
   }
 
-  /* line 25, ../scss/_481up.scss */
+  /* line 26, ../scss/_481up.scss */
   .goup {
     right: 20px;
   }
 
-  /* line 29, ../scss/_481up.scss */
+  /* line 30, ../scss/_481up.scss */
   #container {
     margin-top: 42px;
   }
 
-  /* line 33, ../scss/_481up.scss */
+  /* line 34, ../scss/_481up.scss */
   #logo {
     font-size: 36px;
   }
 
-  /* line 37, ../scss/_481up.scss */
+  /* line 38, ../scss/_481up.scss */
   #menu {
     display: none;
     margin-top: 7px;
   }
-  /* line 41, ../scss/_481up.scss */
+  /* line 42, ../scss/_481up.scss */
   #menu > li > a {
     padding: 3px 5px;
     font-size: 12px;
   }
 
-  /* line 47, ../scss/_481up.scss */
+  /* line 48, ../scss/_481up.scss */
   .social p {
     width: 100%;
     margin-bottom: 5px;
     text-align: left;
   }
 
-  /* line 53, ../scss/_481up.scss */
+  /* line 54, ../scss/_481up.scss */
   .wrap {
     max-width: 100%;
   }
 
-  /* line 59, ../scss/_481up.scss */
+  /* line 60, ../scss/_481up.scss */
   #main > article aside {
     width: 100%;
     text-align: center;
     margin-top: 10px;
   }
-  /* line 64, ../scss/_481up.scss */
+  /* line 65, ../scss/_481up.scss */
   #main > article section {
     width: 100%;
   }
 
-  /* line 70, ../scss/_481up.scss */
+  /* line 71, ../scss/_481up.scss */
   .article-header {
     width: 100%;
   }
-  /* line 73, ../scss/_481up.scss */
+  /* line 74, ../scss/_481up.scss */
   .article-header h1 {
     float: none;
   }
-  /* line 77, ../scss/_481up.scss */
+  /* line 78, ../scss/_481up.scss */
   .article-header .byline {
     float: none;
     margin-top: 10px;
   }
 
-  /* line 84, ../scss/_481up.scss */
+  /* line 85, ../scss/_481up.scss */
   .entry-content img {
     width: 100%;
   }
 
-  /* line 90, ../scss/_481up.scss */
+  /* line 91, ../scss/_481up.scss */
   .post-social a {
     width: 60px;
     height: 60px;
     line-height: 50px;
     font-size: 40px;
   }
-  /* line 96, ../scss/_481up.scss */
+  /* line 97, ../scss/_481up.scss */
   .post-social a.dokul {
     width: 252px;
     height: 60px;
@@ -1233,76 +1220,81 @@ you can add resource intensive styles.
   
   ******************************************************************/
   /* line 14, ../scss/_768up.scss */
-  .header {
-    height: 82px;
-  }
-  /* line 17, ../scss/_768up.scss */
-  .header.small {
-    height: 42px;
-  }
-
-  /* line 22, ../scss/_768up.scss */
   #container {
     margin-top: 82px;
   }
 
-  /* line 26, ../scss/_768up.scss */
+  /* line 19, ../scss/_768up.scss */
+  .small #menu {
+    margin-top: 3px;
+  }
+  /* line 22, ../scss/_768up.scss */
+  .small #menu > li > a {
+    padding: 3px 6px;
+    font-size: 14px;
+  }
+  /* line 27, ../scss/_768up.scss */
+  .small #logo {
+    font-size: 30px;
+  }
+
+  /* line 32, ../scss/_768up.scss */
   #logo {
     font-size: 72px;
   }
 
-  /* line 30, ../scss/_768up.scss */
+  /* line 36, ../scss/_768up.scss */
   #menu {
     margin-top: 20px;
   }
-  /* line 33, ../scss/_768up.scss */
+  /* line 39, ../scss/_768up.scss */
   #menu > li > a {
     padding: 11px 20px;
     font-size: 19px;
   }
 
-  /* line 39, ../scss/_768up.scss */
+  /* line 45, ../scss/_768up.scss */
   .social p {
     width: auto;
     margin-bottom: 0;
   }
 
-  /* line 44, ../scss/_768up.scss */
+  /* line 50, ../scss/_768up.scss */
   .wrap {
     max-width: 768px;
   }
 
-  /* line 50, ../scss/_768up.scss */
+  /* line 56, ../scss/_768up.scss */
   #main > article aside {
     width: 160px;
   }
-  /* line 53, ../scss/_768up.scss */
+  /* line 59, ../scss/_768up.scss */
   #main > article section {
     width: 540px;
   }
 
-  /* line 60, ../scss/_768up.scss */
+  /* line 66, ../scss/_768up.scss */
   .article-header h1 {
     float: left;
   }
-  /* line 64, ../scss/_768up.scss */
+  /* line 70, ../scss/_768up.scss */
   .article-header .byline {
     float: right;
   }
 
-  /* line 71, ../scss/_768up.scss */
+  /* line 77, ../scss/_768up.scss */
   .entry-content img {
     width: 540px;
   }
 
-  /* line 77, ../scss/_768up.scss */
+  /* line 83, ../scss/_768up.scss */
   .post-social a {
     width: 75px;
     height: 75px;
     line-height: 65px;
     font-size: 50px;
   }
-  /* line 83, ../scss/_768up.scss */
+  /* line 89, ../scss/_768up.scss */
   .post-social a.dokul {
     width: 154px;
     height: 60px;

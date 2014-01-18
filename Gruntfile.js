@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       },
       dist: {
         //src: ['library/js/scripts.min.js'],
-        src: ['library/js/libs/jquery.infinitescroll.js', 'library/js/scripts.js'],
+        src: ['library/js/libs/jquery.infinitescroll.js', 'library/js/libs/plugins.js', 'library/js/libs/history.js', 'library/js/scripts.js'],
         dest: 'inc/final.min.js',
       },
     },

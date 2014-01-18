@@ -15,22 +15,22 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 
+@font-face {
+    font-family: 'turkgif';
+    src: url('fonts/turkgif.eot');
+    src: url('fonts/turkgif.eot?#iefix') format('embedded-opentype'),
+         url('fonts/turkgif.woff') format('woff'),
+         url('fonts/turkgif.ttf') format('truetype'),
+         url('fonts/turkgif.svg#turkgifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
 	font-family: $sans-serif;
 	font-size: 100%;
 	font-weight: 300;
 	color: #000;
-}
-
-@font-face {
-	font-family: 'turkgif';
-	src:url('fonts/turkgif.eot');
-	src:url('fonts/turkgif.eot?#iefix') format('embedded-opentype'),
-		url('fonts/turkgif.woff') format('woff'),
-		url('fonts/turkgif.ttf') format('truetype'),
-		url('fonts/turkgif.svg#turkgif') format('svg');
-	font-weight: normal;
-	font-style: normal;
 }
 
 .icon {
@@ -165,19 +165,6 @@ HEADER STYLES
 }
 
 .small {
-	#logo {
-		font-size: 30px;
-	}
-
-	#menu {
-		margin-top: 3px;
-		
-		> li > a {
-			padding: 3px 6px;
-			font-size: 14px;
-		}
-	}
-
 	.goup {
 		display: block;
 	}

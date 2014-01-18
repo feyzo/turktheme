@@ -14,11 +14,12 @@ so you still want to keep it pretty light and simply expand
 upon your base.scss styles.
 
 ******************************************************************/
-.header { 
-	height: 50px;
-
-	&.small {
-		height: 42px;
+.small {
+	#menu {
+		margin-top: -1px;
+	}
+	#logo {
+		font-size: 23px;
 	}
 }
 
