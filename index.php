@@ -24,6 +24,7 @@
 								preg_match($pattern, $str, $matches);
 
 								$imgurl = $matches[1];
+
 							?>	
 						<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 							<header class="article-header clearfix">
@@ -63,7 +64,15 @@
 								</aside>
 							</div>
 						</article>
+								
 
+						<?php if ( $isInfinite != '1' ) : ?>
+							<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-7123486134644519" data-ad-slot="9620683671"></ins>
+							<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
+						<?php endif; ?>
+						
 						<?php endwhile; ?>
 						<?php else : ?>
 							<?php if ( $isInfinite != '1' ) : ?>

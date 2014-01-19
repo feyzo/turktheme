@@ -376,34 +376,35 @@ come into play. Have fun!
 /* line 56, ../scss/_768up.scss */
 #main > article aside {
   width: 160px;
+  margin-top: 0;
 }
-/* line 59, ../scss/_768up.scss */
+/* line 60, ../scss/_768up.scss */
 #main > article section {
   width: 540px;
 }
 
-/* line 66, ../scss/_768up.scss */
+/* line 67, ../scss/_768up.scss */
 .article-header h1 {
   float: left;
 }
-/* line 70, ../scss/_768up.scss */
+/* line 71, ../scss/_768up.scss */
 .article-header .byline {
   float: right;
 }
 
-/* line 77, ../scss/_768up.scss */
+/* line 78, ../scss/_768up.scss */
 .entry-content img {
   width: 540px;
 }
 
-/* line 83, ../scss/_768up.scss */
+/* line 84, ../scss/_768up.scss */
 .post-social a {
   width: 75px;
   height: 75px;
   line-height: 65px;
   font-size: 50px;
 }
-/* line 89, ../scss/_768up.scss */
+/* line 90, ../scss/_768up.scss */
 .post-social a.dokul {
   width: 154px;
   height: 60px;

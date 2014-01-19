@@ -13,7 +13,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&subset=latin-ext' rel='stylesheet' type='text/css'>
-		<link rel='stylesheet' id='turktheme-css' href='http://assets.cdn.turkgif.com/inc/final.min.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='turktheme-css' href='http://assets.cdn.turkgif.com/inc/final_v3.min.css' type='text/css' media='all' />
 		
 		<link rel="shortcut icon" href="http://meta.cdn.turkgif.com/meta/favicon.ico" type="image/x-icon" />
 		<link rel="apple-touch-icon" href="http://meta.cdn.turkgif.com/meta/apple-touch-icon.png" />
@@ -128,7 +128,7 @@
 			<div class="social wrap clearfix small">
 				<p>Sadece Türkiye'den gifler</p>
 				<div class="like-container">
-					<div class="fb-like" data-href="http://turkgif.com" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+					<div class="fb-like" data-href="https://www.facebook.com/turkgif" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 				</div>
 				<div class="tweet-container">
 					<a href="https://twitter.com/turkgif" class="twitter-follow-button" data-show-count="true" data-lang="tr" data-width="175px">@turkgif'i takip et</a>

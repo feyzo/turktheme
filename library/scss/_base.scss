@@ -291,6 +291,8 @@ HEADER STYLES
 
 #main {
 	padding-bottom: 80px;
+	text-align: center;
+	
 	> article {
 		border-bottom: 1px solid lighten($turk-blue, 60%);
 		padding-bottom: 2em;
@@ -300,6 +302,10 @@ HEADER STYLES
 			width: 540px;
 			float: left;
 		}
+	}
+
+	ins {
+		margin-top: 25px;
 	}
 }
 
@@ -381,6 +387,10 @@ HEADER STYLES
 		&.dokul{
 			font-weight: 500;
 		}
+
+		ins{
+			margin-top: 10px;
+		} 
 	}
 
 	
