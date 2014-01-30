@@ -17,11 +17,11 @@ GENERAL STYLES
 
 @font-face {
     font-family: 'turkgif';
-    src: url('fonts/turkgif.eot');
-    src: url('fonts/turkgif.eot?#iefix') format('embedded-opentype'),
-         url('fonts/turkgif.woff') format('woff'),
-         url('fonts/turkgif.ttf') format('truetype'),
-         url('fonts/turkgif.svg#turkgifregular') format('svg');
+    src: url('http://assets1.cdn.turkgif.com/inc/fonts/turkgif_v2.eot');
+    src: url('http://assets1.cdn.turkgif.com/inc/fonts/turkgif_v2.eot?#iefix') format('embedded-opentype'),
+         url('http://assets1.cdn.turkgif.com/inc/fonts/turkgif_v2.woff') format('woff'),
+         url('http://assets1.cdn.turkgif.com/inc/fonts/turkgif_v2.ttf') format('truetype'),
+         url('http://assets1.cdn.turkgif.com/inc/fonts/turkgif_v2.svg#turkgifregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -67,6 +67,9 @@ body {
 }
 .icon-arrow-up:before {
 	content: "\e606";
+}
+.icon-facebook2:before {
+	content: "\e607";
 }
 
 /*********************
@@ -288,6 +291,73 @@ HEADER STYLES
 	}
 }
 
+.like-container {
+	position: relative;
+	text-align: left;
+	height: 25px;
+	margin-left: 7px;
+
+	a {
+		&.socialite {
+			background: #4C69BA;
+			background: -webkit-gradient(linear, center top, center bottom, from(#4C69BA), to(#3B55A0));
+			background: -webkit-linear-gradient(#4C69BA, #3B55A0);
+			border: none;
+			-webkit-border-radius: 2px;
+			color: #FFF;
+			height: 20px;
+			line-height: 20px;
+			text-shadow: 0 -1px 0 #354C8C;
+			font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
+			font-size: 11px;
+			font-weight: 400;
+			padding: 3px 5px 3px 3px;
+			cursor: pointer;
+			text-decoration: none;
+
+			span {
+				vertical-align: middle;
+				margin-right: 2px;
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+.fbtext {
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
+	color: #333;
+	font-size: 11px;
+	text-shadow: none;
+	position: absolute;
+	left: 60px;
+}
+
+.tweet-container {
+	a {
+		&.socialite {
+			background-color: #EEE;
+			background-image: -webkit-linear-gradient(#FFF,#DEDEDE);
+			background-image: linear-gradient(#FFF,#DEDEDE);
+			border: #CCC solid 1px;
+			border-radius: 3px;
+			color: #333;
+			font-weight: 600;
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+			font-family: normal normal normal 11px/18px 'Helvetica Neue',Arial,sans-serif;
+			text-decoration: none;
+			font-size: 11px;
+			padding: 3px 5px;
+
+			span {
+				color: #0099EC;
+				vertical-align: middle;
+				margin-right: 2px;
+				font-size: 17px;
+			}
+		}
+	}
+} 
 
 #main {
 	padding-bottom: 80px;
@@ -365,7 +435,7 @@ HEADER STYLES
 }
 
 .post-social {
-	a {
+	> a {
 		@include transition(all 0.3s ease-in-out);
 
 		&:hover {
@@ -393,7 +463,9 @@ HEADER STYLES
 		} 
 	}
 
-	
+	.like-container {
+		margin-top: 10px;
+	}
 }
 
 .post-comments {

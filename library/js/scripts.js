@@ -68,7 +68,13 @@ jQuery(document).ready(function($) {
 		}
 	}, function(newElements, data, url) {
 		history.pushState(null, null, '/page/' + currentPageNumber + '/');
+
+		if (currentPageNumber > 1) {
+			ga('send', 'pageview', '/page/' + currentPageNumber + '/');
+		};
+		
 		currentPageNumber++;
+
 	});
 	//infinite scroll
 
@@ -86,8 +92,27 @@ jQuery(document).ready(function($) {
     $(".goup").on("click", function() {
 		$('html, body').animate({scrollTop: 0}, 500);
 	});
-      
-
 	//menu scroll
  
+ 	//social lazy load
+ 	Socialite.setup({
+	    facebook: {
+	        lang     : 'tr_TR',
+	        appId    : 409586202501141,
+	        onlike   : function(url) { /* ... */ },
+	        onunlike : function(url) { /* ... */ }
+	    },
+	    twitter: {
+	        lang       : 'tr',
+	        onclick    : function(e) { /* ... */ },
+	        onfollow   : function(e) { /* ... */ }
+	    }
+	});
+
+ 	$('body').delegate('.like-container, .tweet-container', 'mouseover', function () {
+		Socialite.load($(this)[0]);
+ 	});
+
+
+
 }); /* end of as page load scripts */

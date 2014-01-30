@@ -13,8 +13,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500&subset=latin-ext' rel='stylesheet' type='text/css'>
-		<link rel='stylesheet' id='turktheme-css' href='http://assets.cdn.turkgif.com/inc/final_v3.min.css' type='text/css' media='all' />
-		
+		<!-- <link rel='stylesheet' id='turktheme-css' href='http://assets.cdn.turkgif.com/inc/final_v11.min.css' type='text/css' media='all' /> -->
+		<link rel='stylesheet' id='turktheme-css' href='/wp-content/themes/turktheme/inc/final.min.css' type='text/css' media='all' />
+
 		<link rel="shortcut icon" href="http://meta.cdn.turkgif.com/meta/favicon.ico" type="image/x-icon" />
 		<link rel="apple-touch-icon" href="http://meta.cdn.turkgif.com/meta/apple-touch-icon.png" />
 		<link rel="apple-touch-icon" sizes="57x57" href="http://meta.cdn.turkgif.com/meta/apple-touch-icon-57x57.png" />
@@ -93,6 +94,16 @@
 			<meta name="twitter:creator" content="@turkgif">
 		
 		<?php //wp_head(); ?>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-46790970-1', 'turkgif.com');
+		  ga('send', 'pageview');
+
+		</script>
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -128,9 +139,12 @@
 			<div class="social wrap clearfix small">
 				<p>Sadece Türkiye'den gifler</p>
 				<div class="like-container">
-					<div class="fb-like" data-href="https://www.facebook.com/turkgif" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+					<?php  /*<div class="fb-like" data-href="https://www.facebook.com/turkgif" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div> */?>
+
+					<a class="socialite facebook-like" data-href="https://www.facebook.com/turkgif" href="https://www.facebook.com/turkgif" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" rel="nofollow" target="_blank"><span class="icon icon-facebook2"></span>Beğen</a>
 				</div>
 				<div class="tweet-container">
-					<a href="https://twitter.com/turkgif" class="twitter-follow-button" data-show-count="true" data-lang="tr" data-width="175px">@turkgif'i takip et</a>
+					<?php  /*<a href="https://twitter.com/turkgif" class="twitter-follow-button" data-show-count="true" data-lang="tr" data-width="175px">@turkgif'i takip et</a>*/?>
+					 <a href="https://twitter.com/turkgif" class="socialite twitter-follow" data-text="TurkGif" data-url="https://twitter.com/turkgif" data-count="vertical" data-show-count="true" data-lang="tr" data-width="180px" rel="nofollow" target="_blank"><span class="icon icon-twitter"></span>Takip et: @turkgif</a>
 				</div>
 			</div>

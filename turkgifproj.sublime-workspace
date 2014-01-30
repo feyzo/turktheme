@@ -1,0 +1,388 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"post",
+				"postCount"
+			],
+			[
+				"site",
+				"site_url"
+			],
+			[
+				"get_t",
+				"get_the_content"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"turk",
+				"turk-green"
+			],
+			[
+				"cur",
+				"currentPageNumber"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"tur",
+				"turk-green"
+			],
+			[
+				"pag",
+				"pagination"
+			],
+			[
+				"is",
+				"isInfinite"
+			],
+			[
+				"arti",
+				"article"
+			],
+			[
+				"page",
+				"pageNumber"
+			],
+			[
+				"load",
+				"loadEndlessContent"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"sc",
+				"scss"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"pre",
+				"prefix"
+			],
+			[
+				"race",
+				"raceVideo"
+			],
+			[
+				"li",
+				"link	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/header.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/footer.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/js/scripts.js",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/scss/_base.scss",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/index.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/single.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/js/libs/plugins.js",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/search.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/scss/_1030up.scss",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/scss/_1240up.scss",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/scss/_2x.scss",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/scss/_768up.scss",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/page-custom.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/page.php",
+		"/Users/feyzo/Downloads/inc-final.min.js.torrent",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/archive.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/scss/style.scss",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/advanced-cache.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/wp-config.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/httpd-app.conf",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/taxonomy-custom_cat.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/scss/_481up.scss",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/Gruntfile.js",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/.htaccess",
+		"/private/var/folders/y5/9nbl5htx1616h5yds3d4ht2w0000gp/T/fz3temp-1/bnconfig",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/scss/_mixins.scss",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/functions.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/scss/_normalize.scss",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/404.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/js/libs/jquery.infinitescroll.js",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/inc/sprites.svg",
+		"/Users/feyzo/Desktop/turkgif/fonts/turkgif.eot",
+		"/Users/feyzo/Desktop/turkgif/style.css",
+		"/Users/feyzo/Desktop/turkgif/selection.json",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/archive-custom_type.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/bones.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/wp-ajax-post.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/js/libs/jquery-1.10.2.min.js",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/scss/normalize.scss",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/.ftppass",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/sidebar.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/htmlStuff/index.html",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/package.json",
+		"/Users/feyzo/Library/Application Support/Sublime Text 2/Packages/ApplySyntax/ApplySyntax.sublime-settings",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/js/libs/modernizr.custom.min.js",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/js/libs/modernizr.custom.min_OLD.js",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/web.config",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/images/win8-tile-icon.png",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/notes.txt",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/css/style.css",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/admin.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/library/custom-post-type.php",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme/style.css",
+		"/Users/feyzo/Google Drive/Projects/Turkgif/index.html",
+		"/Users/feyzo/Library/Application Support/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/Users/feyzo/Desktop/vlsub-master/README.md",
+		"/Applications/VLC.app/Contents/MacOS/share/lua/extensions/VLSub.luac",
+		"/Applications/VLC.app/Contents/MacOS/share/lua/extensions/vlsub.lua",
+		"/Users/feyzo/Google Drive/Projects/HpIkikat/HpIkikatWebsite/Content/fbapp.css",
+		"/Users/feyzo/Google Drive/Projects/HpIkikat/HpIkikatWebsite/Content/all.css",
+		"/Users/feyzo/Google Drive/Projects/InteractiveMotionTracking/Web/InteractiveRace/InteractiveRaceWebsite/Content/main.css",
+		"/Users/feyzo/Google Drive/Projects/InteractiveMotionTracking/Web/InteractiveRace/InteractiveRaceWebsite/Scripts/motion.js",
+		"/Users/feyzo/Desktop/plasm-simplemodal-4818029/Demos/assets/javascript/demo.js",
+		"/Users/feyzo/Desktop/plasm-simplemodal-4818029/Demos/index.html",
+		"/Users/feyzo/Desktop/HP ames/Fontface/stylesheet.css",
+		"/Users/feyzo/Desktop/HP ames/Fontface/font-test.html",
+		"/Users/feyzo/Desktop/webfontkit-20131211-161405/hpsimplified-demo.html",
+		"/Users/feyzo/Desktop/webfontkit-20131211-161125/stylesheet.css",
+		"/Users/feyzo/Desktop/HP ames/stylesheet.css",
+		"/Volumes/Public/Setup stuff/Adobe CS6 Master Collection With Crack - Mac OSX/Adobe CS6 Master Collection for Mac OSX (with crack).nfo",
+		"/Volumes/Public/Setup stuff/MS Office professional plus 2013 x86 dvd 1123673 en + crack[Bellatrix]/en office professional plus 2013 x86 dvd 1123673[Bellatrix].nfo",
+		"/Users/feyzo/Downloads/BdGIMpFHgJdDNgQEzdEEnAJJ.js",
+		"/Users/feyzo/Desktop/OLD MAC/Desktop/The iOS Apprentice 1 - Getting Started/HTML/reset.css",
+		"/Users/feyzo/Desktop/Adobe CS6 Master Collection With Crack - Mac OSX/Adobe CS6 Master Collection for Mac OSX (with crack).nfo",
+		"/Users/feyzo/Desktop/VMware.Fusion.v6.0.Professional.MacOSX.Incl.Keymaker-EMBRACE/embrace.nfo"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/feyzo/Google Drive/Projects/Turkgif/turktheme"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"aside",
+			"cache",
+			"assets",
+			"..",
+			"-webfont",
+			"wp-con",
+			"test",
+			"tags",
+			"container",
+			"font-we",
+			"border-box",
+			"box-siz",
+			"margin",
+			" ",
+			"pagination",
+			"finishedms",
+			"finished",
+			"finishedMsg",
+			"twit",
+			"isDuringAjax",
+			"msg",
+			"msgText",
+			"start",
+			"fill=\"rgba(44, 62, 80, 0.5)\" ",
+			"\n	width: 50px;",
+			":",
+			"\\",
+			"bones_page_navi",
+			"line-height",
+			"the_content",
+			".tags",
+			"article-header",
+			"article-",
+			"max-wid",
+			"wrap",
+			"line-he",
+			"link-hov",
+			"link-ho",
+			"dynamic_sidebar",
+			"left",
+			"p",
+			"\nget_sidebar",
+			"\nget_side",
+			"sidebar",
+			"visited",
+			"bones",
+			"link-color",
+			"visited",
+			"$serif",
+			"bar",
+			"jquery",
+			"wp_footer",
+			"footer",
+			"wp_head",
+			"googleapis",
+			"print",
+			"media=\"print\"",
+			"italic",
+			"it",
+			"italic",
+			"sans",
+			"\"/",
+			"&",
+			"=",
+			"kiosk"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"\\n",
+			"/n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 279.0,
+	"status_bar_visible": true
+}

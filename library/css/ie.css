@@ -315,6 +315,12 @@ upon your base.scss styles.
   line-height: 55px;
 }
 
+/* line 105, ../scss/_481up.scss */
+.adresponsive {
+  width: 90%;
+  overflow: hidden;
+}
+
 /******************************************************************
 Site Name:
 Author:
@@ -411,6 +417,10 @@ come into play. Have fun!
   font-size: 25px;
   line-height: 60px;
 }
+/* line 98, ../scss/_768up.scss */
+.post-social .like-container {
+  height: 60px;
+}
 
 /******************************************************************
 Site Name: 
@@ -453,6 +463,11 @@ be seen on the Desktop.
   height: 60px;
   font-size: 32px;
   line-height: 60px;
+}
+
+/* line 51, ../scss/_1030up.scss */
+.adsbygoogle {
+  display: block !important;
 }
 
 /* 

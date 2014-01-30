@@ -50,18 +50,39 @@
 										<a href="http://www.tumblr.com/share/photo?source=<?php echo esc_url($imgurl) ?>&caption=<?php echo urlencode(the_title_attribute()) ?>&clickthru=<?php echo urlencode(the_permalink()) ?>" target="_blank" class="post-tumblr"><span class="icon icon-tumblr"></span></a>
 										
 										<a href="mailto:arkadas@adresi.com?Subject=<?php echo esc_url(the_title_attribute()) ?>&Body=<?php echo urlencode(the_permalink()) ?>" target="_blank" class="post-mail"><span class="icon icon-mail"></span></a>
+										
+										<div class="like-container">
+											<a class="socialite facebook-like" data-href="<?php the_permalink() ?>" href="<?php the_permalink() ?>" data-width="320" data-layout="standard" data-show-faces="true" data-action="like" data-show-faces="false" data-share="false" rel="nofollow" target="_blank"><span class="icon icon-facebook2"></span>Beğen <span class="fbtext">Tüm dünya beğendi bi sen kaldın</span></a>
+										</div>
 									</div>
 
 									<p class="tags"><?php the_tags( __( '', 'bonestheme' ) , '', '' ); ?></p>
+									
+									<div class="adresponsive">
+										<ins class="adsbygoogle"
+										     style="display:inline-block;width:336px;height:280px"
+										     data-ad-client="ca-pub-7123486134644519"
+										     data-ad-slot="4594408071"></ins>
+										<script>
+										(adsbygoogle = window.adsbygoogle || []).push({});
+										</script>
+									</div>
 								</aside>
 							</div>
+						
+							<div class="adresponsive">
+								<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-7123486134644519" data-ad-slot="9620683671"></ins>
+								<script>
+									(adsbygoogle = window.adsbygoogle || []).push({});
+								</script>
+							</div>
+
 							<footer class="article-footer">
 								<div class="post-comments" id="dokul">
 									<?php comments_template(); ?>
 								</div>
 							</footer>
 						</article>
-
 						<?php endwhile; ?>
 
 						<?php else : ?>
